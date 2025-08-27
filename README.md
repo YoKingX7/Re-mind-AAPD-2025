@@ -118,13 +118,13 @@ git push -u origin main // 僅限第一次輸入，往後只需要輸入 git pus
 
 ## Emotion 中英對照
 
-充實 fulfilled
-愉悅 joyful
-憤怒 angry
-放鬆 relaxed
-普通 neutral
-焦慮 anxious
-難過 sad
+- 充實 fulfilled
+- 愉悅 joyful
+- 憤怒 angry
+- 放鬆 relaxed
+- 普通 neutral
+- 焦慮 anxious
+- 難過 sad
 
 ---
 

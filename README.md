@@ -113,3 +113,160 @@ git push -u origin main // 僅限第一次輸入，往後只需要輸入 git pus
 ```
 
 3. 初始化完畢後，執行 `npm run deploy` 指令進行自動化部署
+
+---
+
+## Emotion 中英對照
+
+充實 fulfilled
+愉悅 joyful
+憤怒 angry
+放鬆 relaxed
+普通 neutral
+焦慮 anxious
+難過 sad
+
+---
+
+## 變數改動
+
+### Colors 以下都有加到theme-color裡
+```scss
+$white: #fff !default;
+$gray-50: #E8E8E8 !default;
+$gray-100: #B8B8B7 !default;
+$gray-200: #969595 !default;
+$gray-300: #666564 !default;
+$gray-400: #494746 !default;
+$gray-500: #494746 !default;
+$gray-600: #191716 !default;
+$gray-700: #131211 !default;
+$gray-800: #0F0E0D !default;
+$gray-900: #0B0B0A !default;
+$black: $gray-900 !default;
+
+$blue: #24C4D1 !default;
+$red: #FE6A4D !default;
+$yellow: #F1B626 !default;
+
+$blue-50: #E9F9FA !default;
+$blue-100: #BBEDF1 !default;
+$blue-200: #9AE4EA !default;
+$blue-300: #6CD7E0 !default;
+$blue-400: #50D0DA !default;
+$blue-500: $blue !default;
+$blue-600: #21B2BE !default;
+$blue-700: #1A8B94 !default;
+$blue-800: #146C73 !default;
+$blue-900: #0F5258 !default;
+
+$red-50: #FFF0ED !default;
+$red-100: #FFD1C8 !default;
+$red-200: #FFBAAD !default;
+$red-300: #FE9B88 !default;
+$red-400: #FE8871 !default;
+$red-500: $red !default;
+$red-600: #E76046 !default;
+$red-700: #B44B37 !default;
+$red-800: #8C3A2A !default;
+$red-900: #6B2D20 !default;
+
+$yellow-10: #FFFDF8 !default;
+$yellow-50: #FEF8E9 !default;
+$yellow-100: #FBE8BC !default;
+$yellow-200: #F9DD9B !default;
+$yellow-300: #F6CE6E !default;
+$yellow-400: #F4C551 !default;
+$yellow-500: $yellow !default;
+$yellow-600: #DBA623 !default;
+$yellow-700: #AB811B !default;
+$yellow-800: #856415 !default;
+$yellow-900: #654C10 !default;
+
+$fulfilled: #FFA192; //充實
+$joyful: #FF7712; // 愉悅
+$angry: #ED4235; // 憤怒
+$relaxed: #FFBA1F; // 放鬆
+$neutral: #A2E553; // 普通
+$anxious: #2B73AA; // 焦慮
+$sad: #25C4D1; // 難過
+```
+
+### 間距 $spacers
+```scss
+$spacers: (
+  0: 0,
+  1: 2px,
+  2: 4px,
+  3: 8px,
+  4: 12px,
+  5: 16px,
+  6: 24px,
+  7: 32px,
+  8: 40px,
+  9: 48px,
+  10: 56px,
+  11: 64px,  )
+```
+
+### 文字大小 $font-sizes
+```scss
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base * 1.125 !default;
+$h6-font-size: $font-size-base !default;
+
+```
+
+### 關閉 RFS：$enable-rfs
+
+```scss
+$enable-rfs: false !default;
+```
+
+### 圓角 $border-radius
+
+```scss
+$border-radiu-xs: 4px !default;
+$border-radius-sm: 8px !default;  // rounded-1
+$border-radius: 12px !default;  // rounded-2
+$border-radius-lg: 1rem !default;  // rounded-3
+$border-radius-xl: 20px !default;  // rounded-4
+$border-radius-xxl: 24px !default;  // rounded-5
+$border-radius-pill: 50rem !default;
+
+"rounded": (
+  property: border-radius,
+  class: rounded,
+  values: (
+    null: var(--#{$prefix}border-radius),
+    0: 0,
+    1: var(--#{$prefix}border-radius-sm),
+    2: var(--#{$prefix}border-radius),
+    3: var(--#{$prefix}border-radius-lg),
+    4: var(--#{$prefix}border-radius-xl),
+    5: var(--#{$prefix}border-radius-xxl),
+    circle: 50%,
+    pill: var(--#{$prefix}border-radius-pill)
+  )
+),
+
+```
+
+
+### 陰影 $box-shadow
+
+```scss
+$box-shadow: 0 2px 4px rgba($black, .1) !default;
+
+```
+
+### 全域樣式
+- 字體：font-family
+- 網頁背景色： $body-bg: $yellow-50 !default;
+- 清除文字標籤下方空間: <h1>~<h6> <p> 標籤
+- 清除 a 標籤文字下方線條
+- 內文行高 $line-height-base: 1.6 !default;
+- 標題字重：$headings-font-weight

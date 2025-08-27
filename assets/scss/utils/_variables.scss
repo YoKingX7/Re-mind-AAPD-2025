@@ -576,7 +576,7 @@ $position-values: (
 
 $body-text-align: null !default;
 $body-color: $gray-900 !default;
-$body-bg: $white !default;
+$body-bg: $yellow-50 !default;
 
 $body-secondary-color: rgba($body-color, .75) !default;
 $body-secondary-bg: $gray-200 !default;
@@ -591,7 +591,8 @@ $body-emphasis-color: $black !default;
 // Style anchor elements.
 
 $link-color: $primary !default;
-$link-decoration: underline !default;
+$link-decoration: none !default;
+// $link-decoration: underline !default;
 $link-shade-percentage: 20% !default;
 $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration: null !default;
@@ -612,7 +613,8 @@ $icon-link-icon-transform: translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom: 1rem !default;
+$paragraph-margin-bottom: 0 !default;
+// $paragraph-margin-bottom: 1rem !default;
 
 
 // Grid breakpoints
@@ -822,12 +824,16 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom: $spacer * .5 !default;
+$headings-margin-bottom: 0 !default;
+// $headings-margin-bottom: $spacer * .5 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
-$headings-font-weight: 500 !default;
+$headings-font-weight: 700 !default;
+// $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
 $headings-color: inherit !default;
+
+
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings

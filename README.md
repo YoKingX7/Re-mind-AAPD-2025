@@ -266,7 +266,7 @@ $box-shadow: 0 2px 4px rgba($black, .1) !default;
 ### 全域樣式
 - 字體：font-family
 - 網頁背景色： $body-bg: $yellow-50 !default;
-- 清除文字標籤下方空間: <h1>~<h6> <p> 標籤
+- 清除文字標籤下方空間: <h1>-<h6><p> 標籤
 - 清除 a 標籤文字下方線條
 - 內文行高 $line-height-base: 1.6 !default;
 - 標題字重：$headings-font-weight

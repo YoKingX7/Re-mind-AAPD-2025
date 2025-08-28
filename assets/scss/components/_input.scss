@@ -1,0 +1,59 @@
+/* Input Demo */
+
+.bg-show {
+    background-color: #d9d9d9;
+}
+
+.photo-icon {
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* 右側輸入膠囊：白底、陰影、邊框淡灰 */
+.ad-chat-box {
+    background-color: $white;
+    border: 1px solid $gray-100;
+    border-radius: $border-radius-pill;
+    display: flex;
+    align-items: center;
+}
+
+/* 右側圖示按鈕：黃系、hover/active 有淺黃底 */
+.ad-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    border-radius: $border-radius-pill;
+    color: $yellow-600; // #dba623
+    transition: $transition-base;
+
+    i {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    &:hover {
+        background-color: $yellow-50; // #fef8e9
+        color: $yellow-700; // #ab811b
+    }
+    &:active {
+        background-color: $yellow-100; // #fbe8bc
+        color: $yellow-800; // #856415
+    }
+    &:focus-visible {
+        outline: 0;
+        box-shadow: 0 0 0 $focus-ring-width rgba($primary, $focus-ring-opacity);
+    }
+}
+
+.send-icon {
+    border: 1px solid #eeaa25;
+    background-color: #eeaa25;
+    border-radius: 50%;
+}

@@ -1,0 +1,15 @@
+.phone-frame {
+    margin: 0 auto;
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+@media(max-width: 500px) {
+    .phone-frame {
+        display: none;
+    }
+}

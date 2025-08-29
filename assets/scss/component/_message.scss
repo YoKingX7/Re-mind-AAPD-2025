@@ -1,0 +1,41 @@
+.chatbox-default {
+    max-width: 250px;
+    border-radius: 16px;
+    padding: 8px 16px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.chatbox-unshow {
+    max-width: 250px;
+    border-radius: 16px;
+    padding: 8px 16px;
+    margin-bottom: 12px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.robot {
+    background-color: white;
+    align-self: flex-start;
+    border-bottom-left-radius: 0 !important;
+}
+
+.me {
+    background-color: $yellow-300;
+    align-self: flex-end;
+    border-bottom-right-radius: 0 !important;
+}
+
+.unshow {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.chatbox-unshow.show {
+    opacity: 1;
+    transform: translateY(0px);
+}

@@ -1,0 +1,40 @@
+.status-bar {
+    width: 375px;
+    min-width: 320px;
+    height: 54px;
+
+    .time {
+        font-family: "SF Pro";
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    .function-list {
+        gap: 7px;
+
+        .signal {
+            width: 19.2px;
+        }
+
+        .wifi {
+            width: 17.14px;
+        }
+
+        .battery {
+            width: 27.33px;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .status-bar {
+        width: 100%;
+        border-radius: 0px;
+        // top: 12px;
+
+        .dynamic-island {
+            display: none;
+        }
+    }
+}

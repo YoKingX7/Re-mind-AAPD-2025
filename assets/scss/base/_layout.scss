@@ -1,0 +1,96 @@
+.view-section {
+    max-width: 396px;
+    height: 829px;
+    margin: 0 auto;
+    padding: 8px 8px 9px 11px;
+    border-radius: 62px;
+    background-image: url('/assets/image/bg/bg_chatroom.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 396px;
+        height: 829px;
+        background-image: url('/assets/image/ios-system/frame.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        z-index: 1000;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .top-side {
+        width: 375px;
+        border-radius: 55px 55px 0px 0px;
+    }
+
+    .scroll-content {
+        padding-top: 118px;
+        height: 620px;
+        scrollbar-width: none;
+    }
+}
+
+.image-upload-btn {
+    width: 50px;
+    height: 50px;
+}
+
+
+.text-send-btn {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(#FCC763, #EEAA25);
+}
+
+.input-bar.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.sticker {
+    width: 80px;
+
+    img {
+        width: 64px;
+        height: 64px;
+    }
+
+    a {
+        font-size: 12px;
+
+        &:hover {
+            background-color: $yellow-100 !important;
+            color: $black !important;
+            font-weight: 500;
+        }
+    }
+}
+
+.emotionLG-sticker {
+    width: 375px;
+    scrollbar-width: none; //Firefox 把scrollbar隱藏
+
+    &::-webkit-scrollbar {
+        display: none; //Chrome, Safari, Edge 把scrollbar隱藏
+    }
+}

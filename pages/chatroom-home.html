@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>聊天室首頁</title>
+
+    <!-- 以下語法：因為重整會出現html還沒加載css樣式，過1秒才後，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="view-section position-relative">
+        <section class="top-side overflow-hidden position-absolute bg-yellow-10 top-3 ">
+            <%- include('./layout/status-bar'); -%>
+                <%- include('./layout/chatroom-header'); -%>
+        </section>
+        <section class="scroll-content overflow-y-scroll">
+            <div class="message d-flex flex-column px-5 py-4" id="message-container">
+                <div class="chatbox-default robot">
+                    我剛剛從手錶讀到你的壓力指數比平常高一些
+                </div>
+                <div class="chatbox-default robot ">
+                    想寫下今天的心情，還是單純跟我聊聊呢？我都在這裡陪你。
+                </div>
+
+            </div>
+        </section>
+        <section class="bottom-side position-absolute bottom-0 pb-3">
+            <div class="suggestion px-5 mb-4">
+                <a class="btn btn-primary w-100 fw-normal rounded-pill px-6 py-3 mb-3 bg-yellow-50"
+                    href="./choosing-emotionLG.html" role="button">紀錄今天的情緒</a>
+                <a class="btn btn-primary w-100 fw-normal rounded-pill px-6 py-3 bg-yellow-50" href="#"
+                    role="button">幫我打打氣！</a>
+
+            </div>
+            <div class="input-default px-5 d-flex gap-3 ">
+                <label
+                    class="image-upload-btn rounded-circle bg-white d-flex justify-content-center align-items-center flex-shrink-0"
+                    for="image-upload"><img src="/assets/image/icon/image.svg" alt="image-upload-btn"></label>
+                <input class="d-none" type="file" id="image-upload" accept="image/*">
+                <div class=" input-bar bg-white py-4 px-5 rounded-1 border border-gray-50 d-flex w-100">
+                    <div><a class="text-gray-300" href="#"> 我跟你說唷：</a></div>
+                    <div class="d-flex gap-3 ms-auto">
+                        <a href="#"><img src="/assets/image/icon/ai.svg" alt="AI-robot"></a>
+                        <a href="#"><img src="/assets/image/icon/sticker.svg" alt="emotionSM-sticker"></a>
+                        <a href="#"><img src="/assets/image/icon/voice.svg" alt="emotion-sticker"></a>
+                    </div>
+                </div>
+            </div>
+            <%- include('./layout/home-bar'); -%>
+        </section>
+
+    </div>
+
+
+    <script type="module" src="../main.js"></script>
+
+
+</body>
+
+</html>

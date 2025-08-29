@@ -57,3 +57,28 @@
     background-color: #eeaa25;
     border-radius: 50%;
 }
+
+.emotion-card {
+    background-color: $yellow-10;
+    border: 1px solid $primary;
+}
+
+.emotion-card-tap {
+    background-color: $yellow-10;
+    border: 1px solid $primary;
+    cursor: pointer;
+    transition: $transition-base;
+    p {
+        color: $gray-300;
+        transition: $transition-base;
+    }
+
+    &.is-active {
+        background-color: $yellow-100;
+        color: $gray-900;
+        font-weight: $font-weight-semibold;
+        p {
+            color: $gray-900;
+        }
+    }
+}

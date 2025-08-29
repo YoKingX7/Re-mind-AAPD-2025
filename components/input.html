@@ -10,7 +10,7 @@
         />
     </head>
     <body>
-        <div class="container bg-gray-400 py-7">
+        <div class="container bg-gray-200 py-7">
             <h2 class="h5 text-white mb-3 fw-bold">輸入框</h2>
             <section>
                 <div class="p-7 bg-show">
@@ -108,72 +108,146 @@
             <hr />
             <section>
                 <div class="p-7 bg-show">
-                    <h3 class="h6">情緒大方向貼圖選單</h3>
-                    <p class="mb-5">預設狀態</p>
-                    <div class="container d-flex gap-3 overflow-x-auto">
-                        <div
-                            class="card rounded-5 overflow-hidden flex-shrink-0 bg-yellow-10 border-primary p-3"
-                            style="max-width: 80px"
-                        >
-                            <img
-                                src="/assets/images/general-direction-emotion/Annoyed.png"
-                                class="card-img h-100 mb-3"
-                                alt="recommend"
-                            />
-                            <div class="text-center">
-                                <p class="fs-7 text-gray-300">心情煩躁</p>
+                    <h3 class="h6 mb-3">情緒大方向貼圖選單</h3>
+                    <div class="mb-6">
+                        <p class="mb-3">預設狀態</p>
+                        <div class="container d-flex gap-3 overflow-x-auto">
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/Annoyed.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7 text-gray-300">心情煩躁</p>
+                                </div>
+                            </div>
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/A_Bit_Worried.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7 text-gray-300">有點不安</p>
+                                </div>
+                            </div>
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/Nothing_Special.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7 text-gray-300">普普通通</p>
+                                </div>
+                            </div>
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/Not_Bad.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7 text-gray-300">還不錯</p>
+                                </div>
+                            </div>
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/Great.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7 text-gray-300">很棒</p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="mb-6">
+                        <p class="mb-3">點選狀態</p>
                         <div
-                            class="card rounded-5 overflow-hidden flex-shrink-0 bg-yellow-10 border-primary p-3"
-                            style="max-width: 80px"
+                            class="container d-flex gap-3 overflow-x-auto emotion-group"
                         >
-                            <img
-                                src="/assets/images/general-direction-emotion/A_Bit_Worried.png"
-                                class="card-img h-100 mb-3"
-                                alt="recommend"
-                            />
-                            <div class="text-center">
-                                <p class="fs-7 text-gray-300">有點不安</p>
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card-tap p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/Annoyed.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7">心情煩躁</p>
+                                </div>
                             </div>
-                        </div>
-                        <div
-                            class="card rounded-5 overflow-hidden flex-shrink-0 bg-yellow-10 border-primary p-3"
-                            style="max-width: 80px"
-                        >
-                            <img
-                                src="/assets/images/general-direction-emotion/Nothing_Special.png"
-                                class="card-img h-100 mb-3"
-                                alt="recommend"
-                            />
-                            <div class="text-center">
-                                <p class="fs-7 text-gray-300">普普通通</p>
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card-tap is-active p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/A_Bit_Worried.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7">有點不安</p>
+                                </div>
                             </div>
-                        </div>
-                        <div
-                            class="card rounded-5 overflow-hidden flex-shrink-0 bg-yellow-10 border-primary p-3"
-                            style="max-width: 80px"
-                        >
-                            <img
-                                src="/assets/images/general-direction-emotion/Not_Bad.png"
-                                class="card-img h-100 mb-3"
-                                alt="recommend"
-                            />
-                            <div class="text-center">
-                                <p class="fs-7 text-gray-300">還不錯</p>
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card-tap p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/Nothing_Special.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7">普普通通</p>
+                                </div>
                             </div>
-                        </div>
-                        <div
-                            class="card rounded-5 overflow-hidden flex-shrink-0 bg-yellow-10 border-primary p-3"
-                            style="max-width: 80px"
-                        >
-                            <img
-                                src="/assets/images/general-direction-emotion/Great.png"
-                                class="card-img h-100 mb-3"
-                                alt="recommend"
-                            />
-                            <div class="text-center">
-                                <p class="fs-7 text-gray-300">很棒</p>
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card-tap p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/Not_Bad.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7">還不錯</p>
+                                </div>
+                            </div>
+                            <div
+                                class="card rounded-5 overflow-hidden flex-shrink-0 emotion-card-tap p-3"
+                                style="max-width: 80px"
+                            >
+                                <img
+                                    src="/assets/images/general-direction-emotion/Great.png"
+                                    class="card-img h-100 mb-3"
+                                    alt="recommend"
+                                />
+                                <div class="text-center">
+                                    <p class="fs-7">很棒</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -182,111 +256,227 @@
             <hr />
             <section>
                 <div class="p-7 bg-show">
-                    <h3 class="h6">具體情緒貼圖選單</h3>
-                    <p class="mb-5">預設狀態</p>
-                    <div class="d-flex gap-3 flex-wrap justify-content-center">
-                        <div>
-                            <div
-                                class="card bg-yellow-10 border-primary overflow-hidden px-3 pt-3 pb-2"
-                                style="max-width: 72px"
-                            >
-                                <img
-                                    src="/assets/images/specific-emotion/Productive.png"
-                                    class="card-img h-100 mb-3"
-                                    alt="Productive"
-                                />
-                                <div class="text-center">
-                                    <p class="fs-7 text-gray-900">充實</p>
+                    <h3 class="h6 mb-3">具體情緒貼圖選單</h3>
+                    <div class="mb-6">
+                        <p class="mb-3 text-center">預設狀態</p>
+                        <div
+                            class="d-flex gap-3 flex-wrap justify-content-center"
+                        >
+                            <div>
+                                <div
+                                    class="card emotion-card overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Productive.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Productive"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">充實</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="card emotion-card overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Joyful.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Joyful"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">愉悅</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="card emotion-card overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Relax.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Relax"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">放鬆</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="card emotion-card overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Ordinary.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Ordinary"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">平靜</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="card emotion-card overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Sad.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Sad"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">難過</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="card emotion-card overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Anxious.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Anxious"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">焦慮</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="card emotion-card overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Angry.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Angry"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">憤怒</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div
-                                class="card bg-yellow-10 border-primary overflow-hidden px-3 pt-3 pb-2"
-                                style="max-width: 72px"
-                            >
-                                <img
-                                    src="/assets/images/specific-emotion/Joyful.png"
-                                    class="card-img h-100 mb-3"
-                                    alt="Joyful"
-                                />
-                                <div class="text-center">
-                                    <p class="fs-7 text-gray-900">愉悅</p>
+                    </div>
+                    <div class="mb-6">
+                        <p class="mb-3 text-center">點選狀態</p>
+                        <div
+                            class="d-flex gap-3 flex-wrap justify-content-center emotion-group"
+                        >
+                            <div>
+                                <div
+                                    class="card emotion-card-tap overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Productive.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Productive"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">充實</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div
-                                class="card bg-yellow-10 border-primary overflow-hidden px-3 pt-3 pb-2"
-                                style="max-width: 72px"
-                            >
-                                <img
-                                    src="/assets/images/specific-emotion/Relax.png"
-                                    class="card-img h-100 mb-3"
-                                    alt="Relax"
-                                />
-                                <div class="text-center">
-                                    <p class="fs-7 text-gray-900">放鬆</p>
+                            <div>
+                                <div
+                                    class="card emotion-card-tap is-active overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Joyful.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Joyful"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">愉悅</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div
-                                class="card bg-yellow-10 border-primary overflow-hidden px-3 pt-3 pb-2"
-                                style="max-width: 72px"
-                            >
-                                <img
-                                    src="/assets/images/specific-emotion/Ordinary.png"
-                                    class="card-img h-100 mb-3"
-                                    alt="Ordinary"
-                                />
-                                <div class="text-center">
-                                    <p class="fs-7 text-gray-900">平靜</p>
+                            <div>
+                                <div
+                                    class="card emotion-card-tap overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Relax.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Relax"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">放鬆</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div
-                                class="card bg-yellow-10 border-primary overflow-hidden px-3 pt-3 pb-2"
-                                style="max-width: 72px"
-                            >
-                                <img
-                                    src="/assets/images/specific-emotion/Sad.png"
-                                    class="card-img h-100 mb-3"
-                                    alt="Sad"
-                                />
-                                <div class="text-center">
-                                    <p class="fs-7 text-gray-900">難過</p>
+                            <div>
+                                <div
+                                    class="card emotion-card-tap overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Ordinary.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Ordinary"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">平靜</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div
-                                class="card bg-yellow-10 border-primary overflow-hidden px-3 pt-3 pb-2"
-                                style="max-width: 72px"
-                            >
-                                <img
-                                    src="/assets/images/specific-emotion/Anxious.png"
-                                    class="card-img h-100 mb-3"
-                                    alt="Anxious"
-                                />
-                                <div class="text-center">
-                                    <p class="fs-7 text-gray-900">焦慮</p>
+                            <div>
+                                <div
+                                    class="card emotion-card-tap overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Sad.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Sad"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">難過</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div
-                                class="card bg-yellow-10 border-primary overflow-hidden px-3 pt-3 pb-2"
-                                style="max-width: 72px"
-                            >
-                                <img
-                                    src="/assets/images/specific-emotion/Angry.png"
-                                    class="card-img h-100 mb-3"
-                                    alt="Angry"
-                                />
-                                <div class="text-center">
-                                    <p class="fs-7 text-gray-900">憤怒</p>
+                            <div>
+                                <div
+                                    class="card emotion-card-tap overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Anxious.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Anxious"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">焦慮</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="card emotion-card-tap overflow-hidden px-3 pt-3 pb-2"
+                                    style="max-width: 72px"
+                                >
+                                    <img
+                                        src="/assets/images/specific-emotion/Angry.png"
+                                        class="card-img h-100 mb-3"
+                                        alt="Angry"
+                                    />
+                                    <div class="text-center">
+                                        <p class="fs-7 text-gray-900">憤怒</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

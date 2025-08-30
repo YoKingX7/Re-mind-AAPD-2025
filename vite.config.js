@@ -39,23 +39,40 @@ export default defineConfig({
         // 啟動 server 時預設開啟的頁面
         open: "pages/index.html",
     },
+
     build: {
         rollupOptions: {
+            // 同時把 pages/ 與 components/ 的 html 都列為入口
             input: Object.fromEntries(
-                glob
-                    .sync("pages/**/*.html")
-                    .map((file) => [
-                        path.relative(
-                            "pages",
-                            file.slice(
-                                0,
-                                file.length - path.extname(file).length
-                            )
-                        ),
-                        fileURLToPath(new URL(file, import.meta.url)),
-                    ])
+                glob.sync("{pages,components}/**/*.html").map((file) => [
+                    path.relative(
+                        "", // 讓輸出路徑自然帶上資料夾層級（components/…、pages/…）
+                        file.slice(0, file.length - path.extname(file).length)
+                    ),
+                    fileURLToPath(new URL(file, import.meta.url)),
+                ])
             ),
         },
         outDir: "dist",
     },
 });
+//     build: {
+//         rollupOptions: {
+//             input: Object.fromEntries(
+//                 glob
+//                     .sync("pages/**/*.html")
+//                     .map((file) => [
+//                         path.relative(
+//                             "pages",
+//                             file.slice(
+//                                 0,
+//                                 file.length - path.extname(file).length
+//                             )
+//                         ),
+//                         fileURLToPath(new URL(file, import.meta.url)),
+//                     ])
+//             ),
+//         },
+//         outDir: "dist",
+//     },
+// });

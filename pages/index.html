@@ -6,17 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
+
+    <!-- 以下語法：因為重整會出現html還沒加載css樣式，過1秒才後，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
+
+
+
 </head>
 
 <body>
-    <%- include('./layout/header'); -%>
+
+    <main class="view-section-index position-relative">
+ 
 
 
-        <a href="chatroom-home.html">聊聊</a>
-        <a href="/components/input.html">元件</a>
+    <section class="top-side overflow-hidden position-absolute top-3 ">
+        <%- include('./layout/status-bar'); -%>     
+        
+        <div class="d-flex justify-content-center mt-11">
+            <a class="me-7" href="chatroom-home.html">聊聊</a>
+            <a href="/components/input.html">已完成元件區</a>
+        </div>
+      
+    </section>
+
+    </main> 
 
 
-        <%- include('./layout/footer'); -%>
+
 
             <script type="module" src="../main.js"></script>
 </body>

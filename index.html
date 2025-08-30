@@ -1,38 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>index</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+        <!-- 以下語法：因為重整會出現html還沒加載css樣式，過1秒才後，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
+        <style>
+            body {
+                visibility: hidden;
+            }
+        </style>
+        <script>
+            window.addEventListener("load", () => {
+                document.body.style.visibility = "visible";
+            });
+        </script>
+      <script type="module" crossorigin src="/Re-mind-AAPD-2025/assets/main-GLtqJsrR.js"></script>
+      <link rel="stylesheet" crossorigin href="/Re-mind-AAPD-2025/assets/main-BULxBzTm.css">
+    </head>
 
-    <!-- 以下語法：因為重整會出現html還沒加載css樣式，過1秒才後，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
-    <style>
-        body {
-            visibility: hidden;
-        }
-    </style>
-    <script>
-        window.addEventListener('load', () => {
-            document.body.style.visibility = 'visible';
-        });
-    </script>
-
-
-
-  <script type="module" crossorigin src="/Re-mind-AAPD-2025/assets/main-DcIvdrd5.js"></script>
-  <link rel="stylesheet" crossorigin href="/Re-mind-AAPD-2025/assets/main-B7fK_W6I.css">
-</head>
-
-<body>
-
-    <main class="view-section-index position-relative">
- 
-
-
-    <section class="top-side overflow-hidden position-absolute top-3 ">
-        <div class="status-bar position-relative z-1">
+    <body>
+        <main class="view-section-index position-relative">
+            <section class="top-side overflow-hidden position-absolute top-3">
+                <div class="status-bar position-relative z-1">
     <div class="row h-100 align-items-center">
         <div class="col-4 p-0 d-flex justify-content-center align-items-center"><time class="time"
                 datetime="2025-08-28T9:41">9:41</time></div>
@@ -47,20 +39,13 @@
         </div>
 
     </div>
-</div>     
-        
-        <div class="d-flex justify-content-center mt-11">
-            <a class="me-7" href="chatroom-home.html">聊聊</a>
-            <a href="/components/input.html">已完成元件區</a>
-        </div>
-      
-    </section>
+</div>
+                <div class="d-flex justify-content-center mt-11">
+                    <a class="me-7" href="chatroom-home.html">聊聊</a>
+                    <a href="../components/input.html">已完成元件區</a>
+                </div>
+            </section>
+        </main>
 
-    </main> 
-
-
-
-
-</body>
-
+    </body>
 </html>

@@ -260,6 +260,8 @@ $border-radius-pill: 50rem !default;
 
 ```scss
 $box-shadow: 0 2px 4px rgba($black, .1) !default;
+$box-shadow-lg: 4px 4px 20px rgba($black, .1) !default;
+
 
 ```
 

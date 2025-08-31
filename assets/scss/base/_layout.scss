@@ -1,3 +1,10 @@
+body {
+    ul {
+        padding: 0;
+    }
+}
+
+//整個頁面
 .view-section {
     max-width: 396px;
     height: 829px;
@@ -26,18 +33,24 @@
     }
 
     .top-side {
-        width: 375px;
+        max-width: 375px;
         border-radius: 55px 55px 0px 0px;
     }
 
     .scroll-content {
+        max-width: 375px;
         padding-top: 118px;
         height: 620px;
         scrollbar-width: none;
     }
+
+    .bottom-side {
+        max-width: 375px;
+    }
 }
 
 
+//input(default/noEenter/enter)
 .image-upload-btn {
     width: 50px;
     height: 50px;
@@ -50,48 +63,52 @@
     background: linear-gradient(#FCC763, #EEAA25);
 }
 
-.input-bar.cursor {
-    animation: blink 1s infinite;
+.inputbar-noEnter::placeholder {
+    color: $yellow-500;
 }
 
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
 
-    50% {
-        opacity: 0;
-    }
+//emotion
+.emotionLG {
+    list-style-type: none;
+    scrollbar-width: none; //Firefox 把scrollbar隱藏
 
-    100% {
-        opacity: 1;
+    &::-webkit-scrollbar {
+        display: none; //Chrome, Safari, Edge 把scrollbar隱藏
     }
 }
 
 .sticker {
+
+    &:hover,
+    :active {
+        background-color: $yellow-100 !important;
+        color: $black !important;
+        font-weight: 500;
+    }
+
+}
+
+.sticker.selected {
+    background-color: $yellow-100 !important;
+    color: $black !important;
+    font-weight: 500;
+}
+
+.stickerLG {
     width: 80px;
 
     img {
         width: 64px;
         height: 64px;
     }
-
-    a {
-        font-size: 12px;
-
-        &:hover {
-            background-color: $yellow-100 !important;
-            color: $black !important;
-            font-weight: 500;
-        }
-    }
 }
 
-.emotionLG-sticker {
-    width: 375px;
-    scrollbar-width: none; //Firefox 把scrollbar隱藏
+.stickerSM {
+    width: 72px;
 
-    &::-webkit-scrollbar {
-        display: none; //Chrome, Safari, Edge 把scrollbar隱藏
+    img {
+        width: 56px;
+        height: 56px;
     }
 }

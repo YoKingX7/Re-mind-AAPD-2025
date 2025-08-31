@@ -21,10 +21,16 @@ document.querySelectorAll(".emotion-group").forEach((group) => {
 });
 
 
-//載入showChatbox的js檔案
+//載入showMessage.js
 import showMessage from './js/showMessage.js';
-
-// 只有當這頁定義了 chatboxText 時才執行
 if (window.messageText) {
     showMessage(window.messageText);
-}
+} // 只有當這頁定義了 chatboxText 時才執行
+
+
+//載入singleselect.js
+import { setupSingleSelect } from './js/singleSelect.js';
+document.addEventListener('DOMContentLoaded', () => {
+    setupSingleSelect('#single-selection-group .sticker', '#inputbar-noEnter'); // 放上對應sticker-group跟input的id
+});
+

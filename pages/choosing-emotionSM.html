@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>選擇情緒大方向</title>
+    <title>選擇具體情緒</title>
 
     <!-- 以下語法：因為重整會出現html還沒加載css樣式，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
     <style>
@@ -28,7 +28,7 @@
             <%- include('./layout/status-bar'); -%>
                 <%- include('./layout/chatroom-header'); -%>
         </section>
-        <section class="scroll-content overflow-y-scroll ">
+        <section class="scroll-content overflow-y-scroll">
             <div class="message d-flex flex-column px-5 py-4" id="message-container">
                 <div class="chatbox-default robot">
                     我剛剛從手錶讀到你的壓力指數比平常高一些
@@ -36,42 +36,48 @@
                 <div class="chatbox-default robot ">
                     想寫下今天的心情，還是單純跟我聊聊呢？我都在這裡陪你。
                 </div>
+                <div class="chatbox-default me">
+                    紀錄今天的情緒
+                </div>
+                <div class="chatbox-default robot ">
+                    好啊！
+                </div>
+                <div class="chatbox-default robot ">
+                    先挑選一個最貼近你現在感受的情緒～
+                </div>
+
 
             </div>
         </section>
         <section class="bottom-side position-absolute bottom-0 pb-3">
             <ul class="emotionLG d-flex px-5 mb-4 gap-4 flex-nowrap overflow-x-auto" id="single-selection-group">
-                <li class="sticker .stickerLG d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 fs-8 text-gray-300 "
-                    data-text="心情煩躁">
-                    <img src="/assets/image/mood/mood_annoyed.png" alt="mood_annoyed">
-                    心情煩躁
+                <li class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 text-gray-300 "
+                    data-text="放鬆">
+                    <img src="/assets/image/sticker/Relax.png" alt="Relax">
+                    放鬆
                 </li>
-                <li class="sticker .stickerLG d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 fs-8 text-gray-300 "
-                    data-text="有點不安">
-                    <img src="/assets/image/mood/mood_worried.png" alt="mood_worried">
-                    有點不安
+                <li class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 text-gray-300 "
+                    data-text="平靜">
+                    <img src="/assets/image/sticker/Ordinary.png" alt="Ordinary">
+                    平靜
                 </li>
-                <li class="sticker .stickerLG d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 fs-8 text-gray-300 "
-                    data-text="普普通通">
-                    <img src="/assets/image/mood/mood_nothing.png" alt="mood_nothing">
-                    普普通通
+                <li class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 text-gray-300 "
+                    data-text="難過">
+                    <img src="/assets/image/sticker/Sad.png" alt="Sad">
+                    難過
                 </li>
-                <li class="sticker .stickerLG d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 fs-8 text-gray-300 "
-                    data-text="還不錯">
-                    <img src="/assets/image/mood/mood_notbad.png" alt="mood_notbad">
-                    還不錯
+                <li class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 text-gray-300 "
+                    data-text="焦慮">
+                    <img src="/assets/image/sticker/Anxious.png" alt="Anxious">
+                    焦慮
                 </li>
-                <li class="sticker .stickerLG d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 fs-8 text-gray-300 "
-                    data-text="很棒">
-                    <img src="/assets/image/mood/mood_great.png" alt="mood_great">
-                    很棒
-                </li>
+
             </ul>
             <div class="input-noEnter px-5 d-flex gap-3 ">
                 <input class="inputbar-noEnter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100"
                     id="inputbar-noEnter" type="text" placeholder="|" readonly>
                 <a class="text-send-btn rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                    href="./choosing-emotionSM.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M4.51082 19.9986C4.16617 20.1414 3.83934 20.1125 3.53034 19.9119C3.22134 19.7113 3.06727 19.4195 3.06812 19.0367V13.8564L10.5121 12.0876L3.06812 10.3188V5.13853C3.06812 4.7548 3.22262 4.46307 3.53162 4.26332C3.84061 4.06357 4.16744 4.03422 4.51209 4.17527L20.4442 11.0994C20.8601 11.2965 21.0681 11.6277 21.0681 12.0929C21.0681 12.5572 20.8601 12.8848 20.4442 13.0758L4.51082 19.9986Z"
@@ -88,9 +94,8 @@
     <!-- 要有動畫效果的chatbox內容 -->
     <script>
         window.messageText = [
-            { role: 'me', text: '紀錄今天的情緒' },
-            { role: 'robot', text: '好啊！' },
-            { role: 'robot', text: '先挑選一個最貼近你現在感受的情緒～' }
+            { role: 'me', text: '普普通通' },
+            { role: 'robot', text: '接下來我們一起來探索更具體的情緒～' }
         ];
     </script>
 

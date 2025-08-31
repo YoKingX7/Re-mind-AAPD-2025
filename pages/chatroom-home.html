@@ -52,14 +52,15 @@
                     class="image-upload-btn rounded-circle bg-white d-flex justify-content-center align-items-center flex-shrink-0"
                     for="image-upload"><img src="/assets/image/icon/image.svg" alt="image-upload-btn"></label>
                 <input class="d-none" type="file" id="image-upload" accept="image/*">
-                <div class=" input-bar bg-white py-4 px-5 rounded-1 border border-gray-50 d-flex w-100">
-                    <div><a class="text-gray-300" href="#"> 我跟你說唷：</a></div>
-                    <div class="d-flex gap-3 ms-auto">
+                <div class=" inputbar-default bg-white py-4 px-5 rounded-1 border border-gray-50 d-flex">
+                    <input type="text" class="border-0 w-100" placeholder="我跟你說唷：">
+                    <div class="d-flex gap-3">
                         <a href="#"><img src="/assets/image/icon/ai.svg" alt="AI-robot"></a>
                         <a href="#"><img src="/assets/image/icon/sticker.svg" alt="emotionSM-sticker"></a>
                         <a href="#"><img src="/assets/image/icon/voice.svg" alt="emotion-sticker"></a>
                     </div>
                 </div>
+
             </div>
             <%- include('./layout/home-bar'); -%>
         </section>

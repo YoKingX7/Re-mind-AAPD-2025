@@ -21,9 +21,10 @@ document.querySelectorAll(".emotion-group").forEach((group) => {
 });
 
 
-import showChatbox from './js/showChatbox.js';
+//載入showChatbox的js檔案
+import showMessage from './js/showMessage.js';
 
 // 只有當這頁定義了 chatboxText 時才執行
-if (window.chatboxText) {
-    showChatbox(window.chatboxText);
+if (window.messageText) {
+    showMessage(window.messageText);
 }

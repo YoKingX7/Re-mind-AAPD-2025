@@ -19,3 +19,11 @@ document.querySelectorAll(".emotion-group").forEach((group) => {
         card.classList.add("is-active");
     });
 });
+
+
+import showChatbox from './js/showChatbox.js';
+
+// 只有當這頁定義了 chatboxText 時才執行
+if (window.chatboxText) {
+    showChatbox(window.chatboxText);
+}

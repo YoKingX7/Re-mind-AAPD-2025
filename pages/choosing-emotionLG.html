@@ -92,9 +92,9 @@
     </div>
 
 
-    <script type="module" src="../main.js"></script>
+    <!-- <script type="module" src="../main.js"></script>
 
-    <!-- 不知道為什麼我 showChatbox.js import不進main.js，所以就先放html-->
+    不知道為什麼我 showChatbox.js import不進main.js，所以就先放html
     <script src="/js/showChatbox.js"></script>
     <script>
         const chatboxText = [
@@ -104,7 +104,19 @@
         ];
 
         showChatbox(chatboxText); // 啟動聊天動畫
+    </script> -->
+
+
+    <script>
+        window.chatboxText = [
+            { role: 'me', text: '紀錄今天的情緒' },
+            { role: 'robot', text: '好啊！' },
+            { role: 'robot', text: '先挑選一個最貼近你現在感受的情緒～' }
+        ];
     </script>
+
+    <!-- 匯入 Vite 主入口 JS -->
+    <script type="module" src="../main.js"></script>
 
 </body>
 

@@ -1,4 +1,4 @@
-function showChatbox(chatboxText, chatboxPlace = 'message-container', textDelay = 1000) {
+export default function showChatbox(chatboxText, chatboxPlace = 'message-container', textDelay = 1000) {
   const container = document.getElementById(chatboxPlace);
   let index = 0;
 

@@ -218,6 +218,8 @@ $h4-font-size: $font-size-base * 1.25 !default;
 $h5-font-size: $font-size-base * 1.125 !default;
 $h6-font-size: $font-size-base !default;
 
+fs-7 = 14px
+
 ```
 
 ### 關閉 RFS：$enable-rfs
@@ -229,7 +231,7 @@ $enable-rfs: false !default;
 ### 圓角 $border-radius
 
 ```scss
-$border-radiu-xs: 4px !default;
+$border-radius-xs: 4px !default;
 $border-radius-sm: 8px !default;  // rounded-1
 $border-radius: 12px !default;  // rounded-2
 $border-radius-lg: 1rem !default;  // rounded-3
@@ -274,4 +276,10 @@ $box-shadow-lg: 4px 4px 20px rgba($black, .1) !default;
 - 內文行高 $line-height-sm: 1.2 !default;
 - 標題字重：$headings-font-weight
 
+### progress
+```scss
+$progress-height: 12px !default;
+$progress-bg: $white !default;
 
+
+```

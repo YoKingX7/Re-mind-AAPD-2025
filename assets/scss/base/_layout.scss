@@ -1,5 +1,7 @@
 //body
 body {
+    box-sizing: border-box;
+
     ul {
         padding: 0;
     }
@@ -41,7 +43,7 @@ body {
     .scroll-content {
         max-width: 375px;
         padding-top: 118px;
-        height: 620px;
+        height: 606px;
         scrollbar-width: none;
     }
 
@@ -69,7 +71,7 @@ body {
 }
 
 
-//emotion
+//emotion-sticker
 .emotionLG {
     list-style-type: none;
     scrollbar-width: none; //Firefox 把scrollbar隱藏
@@ -112,4 +114,11 @@ body {
         width: 56px;
         height: 56px;
     }
+}
+
+//emotion-reason
+.emotionR {
+    list-style: none;
+    font-size: 14px;
+    white-space: nowrap;
 }

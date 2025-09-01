@@ -20,13 +20,14 @@ export default function showMessage(messageText, messagePlace = 'message-contain
         msg_text.classList.remove('text-unshow');
         msg_text.classList.add('text-show');
 
+        // 自動捲到底部
+        msg_chatbox.scrollIntoView({ behavior: 'smooth', block: 'end' });
 
       });
     });
 
 
-    // 自動捲到底部
-    container.scrollTop = container.scrollHeight;
+
   }
 
   function next() {

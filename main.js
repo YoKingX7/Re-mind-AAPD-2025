@@ -28,9 +28,17 @@ if (window.messageText) {
 } // 只有當這頁定義了 chatboxText 時才執行
 
 
-//載入singleselect.js
+//載入singleSelect.js
 import { setupSingleSelect } from './js/singleSelect.js';
 document.addEventListener('DOMContentLoaded', () => {
     setupSingleSelect('#single-selection-group .sticker', '#inputbar-noEnter'); // 放上對應sticker-group跟input的id
 });
+
+
+//載入multiSelect.js
+import { setupMultiSelect } from './js/multiSelect.js';
+document.addEventListener('DOMContentLoaded', () => {
+    setupMultiSelect('#multi-selection-group .sticker', '#inputbar-noEnter'); // 放上對應sticker-group跟input的id
+});
+
 

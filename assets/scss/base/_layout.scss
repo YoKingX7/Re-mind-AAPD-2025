@@ -16,11 +16,10 @@ body {
     margin: 0 auto;
     padding: 8px 8px 9px 11px;
     border-radius: 62px;
-    background-image: url('/assets/image/bg/bg_chatroom.jpg');
+    background-image: url("/assets/image/bg/bg_chatroom.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top center;
-
 
     &::before {
         content: "";
@@ -28,7 +27,7 @@ body {
         position: absolute;
         width: 396px;
         height: 829px;
-        background-image: url('/assets/image/ios-system/frame.svg');
+        background-image: url("/assets/image/ios-system/frame.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: top;
@@ -40,7 +39,6 @@ body {
     .top-side {
         width: 375px;
         border-radius: 55px 55px 0px 0px;
-
     }
 
     .bottom-side {
@@ -48,6 +46,45 @@ body {
     }
 }
 
+// 整個頁面-空白 .view-section-white
+.view-section-white {
+    max-width: 396px;
+    height: 829px;
+    margin: 0 auto;
+    padding: 8px 8px 9px 11px;
+    border-radius: 62px;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 396px;
+        height: 829px;
+        background-image: url("/assets/image/ios-system/frame.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        z-index: 1000;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .top-side {
+        max-width: 375px;
+        border-radius: 55px 55px 0px 0px;
+    }
+
+    .scroll-content {
+        max-width: 375px;
+        padding-top: 118px;
+        height: 606px;
+        scrollbar-width: none;
+    }
+
+    .bottom-side {
+        max-width: 375px;
+    }
+}
 
 //適合suggestion*2/ stickerLG/ stickerSM/ stickerR
 .scroll-content {
@@ -64,22 +101,15 @@ body {
 
 //適合suggestion*3
 .S-3 {
-
     height: 442px; //設計稿448
-
 }
 
 //適合suggestion*4
 .S-4 {
-
     height: 398px; //一個suggestion高抓44px
-
 }
 
-
-
-
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .view-section {
         width: 100%;
         padding: 0;
@@ -98,19 +128,17 @@ body {
 
         .bottom-side {
             width: 100%;
-
         }
     }
-
-
-
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .scroll-content {
         margin-top: 0px;
         padding-top: 126px;
-        height: calc(100vh - 132px); // = sticker110高 + 12px的margin-bottom + 想預留的間隔10px
+        height: calc(
+            100vh - 132px
+        ); // = sticker110高 + 12px的margin-bottom + 想預留的間隔10px
     }
 
     .S-0 {
@@ -119,15 +147,15 @@ body {
 
     //適合suggestion*3
     .S-3 {
-
-        height: calc(100vh - 172px); // = sticker150高 + 12px的margin-bottom + 想預留的間隔10px
-
+        height: calc(
+            100vh - 172px
+        ); // = sticker150高 + 12px的margin-bottom + 想預留的間隔10px
     }
 
     //適合suggestion*4
     .S-4 {
-
-        height: calc(100vh - 222px); // = sticker200高 + 12px的margin-bottom + 想預留的間隔10px
-
+        height: calc(
+            100vh - 222px
+        ); // = sticker200高 + 12px的margin-bottom + 想預留的間隔10px
     }
 }

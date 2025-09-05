@@ -43,24 +43,41 @@ body {
 
     }
 
-    .scroll-content {
-        width: 100%;
-        padding-top: 126px;
-        height: 606px;
-        scrollbar-width: none;
-    }
-
-    .scroll-content-R {
-        width: 100%;
-        padding-top: 126px;
-        height: 612px;
-        scrollbar-width: none;
-    }
-
     .bottom-side {
         width: 375px;
     }
 }
+
+
+//適合suggestion*2/ stickerLG/ stickerSM/ stickerR
+.scroll-content {
+    width: 100%;
+    margin-top: 126px;
+    height: 480px;
+    scrollbar-width: none;
+}
+
+//適合diary
+.D {
+    height: 574px;
+}
+
+//適合suggestion*3
+.S-3 {
+
+    height: 442px; //設計稿448
+
+}
+
+//適合suggestion*4
+.S-4 {
+
+    height: 398px; //一個suggestion高抓44px
+
+}
+
+
+
 
 @media(max-width: 500px) {
     .view-section {
@@ -87,79 +104,4 @@ body {
 
 
 
-}
-
-
-
-
-//input(default/noEenter/enter)
-.image-upload-btn {
-    width: 50px;
-    height: 50px;
-}
-
-.text-send-btn {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(#FCC763, #EEAA25);
-}
-
-.inputbar-noEnter::placeholder {
-    color: $yellow-500;
-}
-
-
-
-
-
-//emotion-sticker
-.emotionLG {
-    list-style-type: none;
-    scrollbar-width: none; //Firefox 把scrollbar隱藏
-
-    &::-webkit-scrollbar {
-        display: none; //Chrome, Safari, Edge 把scrollbar隱藏
-    }
-}
-
-.sticker {
-
-    &:hover,
-    :active {
-        background-color: $yellow-100 !important;
-        color: $black !important;
-        font-weight: 500;
-    }
-
-}
-
-.sticker.selected {
-    background-color: $yellow-100 !important;
-    color: $black !important;
-    font-weight: 500;
-}
-
-.stickerLG {
-    width: 80px;
-
-    img {
-        width: 64px;
-        height: 64px;
-    }
-}
-
-.stickerSM {
-    width: 72px;
-
-    img {
-        width: 56px;
-        height: 56px;
-    }
-}
-
-//emotion-reason
-.emotionR {
-    list-style: none;
-    font-size: 14px;
-    white-space: nowrap;
 }

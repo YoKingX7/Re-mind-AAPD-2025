@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>輸入日記</title>
+
+    <!-- 以下語法：因為重整會出現html還沒加載css樣式，過1秒才後，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="view-section position-relative ">
+
+        <!-- 頂部區域-->
+        <section class="top-side position-absolute bg-yellow-10 pt-3">
+            <%- include('./layout/status-bar'); -%>
+                <%- include('./layout/chatroom-header'); -%>
+        </section>
+
+        <!-- 中間區域：訊息滾動-->
+        <section class="scroll-content D overflow-y-scroll">
+            <div class="message d-flex flex-column px-5 py-4" id="message-container">
+                <div class="chatbox-default robot">
+                    我剛剛從手錶讀到你的壓力指數比平常高一些
+                </div>
+                <div class="chatbox-default robot ">
+                    想寫下今天的心情，還是單純跟我聊聊呢？我都在這裡陪你。
+                </div>
+                <div class="chatbox-default me">
+                    紀錄今天的情緒
+                </div>
+                <div class="chatbox-default robot ">
+                    好啊！
+                </div>
+                <div class="chatbox-default robot ">
+                    先挑選一個最貼近你現在感受的情緒～
+                </div>
+                <div class="chatbox-default me ">
+                    普普通通
+                </div>
+                <div class="chatbox-default robot ">
+                    接下來我們一起來探索更具體的情緒～
+                </div>
+                <div class="chatbox-default me ">
+                    難過、焦慮
+                </div>
+                <div class="chatbox-default robot ">
+                    我明白了。這樣的感受真的不容易，謝謝你願意說出來。
+                </div>
+                <div class="chatbox-default robot ">
+                    那你覺得這些情緒可能來自於哪個面向呢？
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+        <!-- 底部區域：系統提供的選項/input-->
+        <section class="bottom-side position-absolute bottom-0 pb-3">
+
+            <!-- 輸入框：可替換 -->
+            <div class="input-wrapper position-relative">
+                <div class="input-default px-5 gap-3" id="input-default" style="display: flex;">
+                    <label
+                        class="image-upload-btn rounded-circle bg-white d-flex justify-content-center align-items-center flex-shrink-0"
+                        for="image-upload"><img src="/assets/image/icon/image.svg" alt="image-upload-btn"></label>
+                    <input class="d-none" type="file" id="image-upload" accept="image/*">
+                    <div class=" inputbar-default bg-white py-4 px-5 rounded-1 border border-gray-50 d-flex w-100"
+                        id="inputbar-default">
+                        <a href="#" class="flex-grow-1 text-gray-300">我跟你說唷：</a>
+                        <div class="d-flex gap-3">
+                            <a href="#"><img src="/assets/image/icon/ai.svg" alt="AI-robot"></a>
+                            <a href="#"><img src="/assets/image/icon/sticker.svg" alt="emotionSM-sticker"></a>
+                            <a href="#"><img src="/assets/image/icon/voice.svg" alt="emotion-sticker"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-enter px-5 gap-3" id="input-enter" style="display: none;">
+                    <input class="inputbar-enter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100"
+                        id="inputbar-enter" type="text" readonly>
+                    <a class="text-send-btn rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        href="./entering-diary2.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.51082 19.9986C4.16617 20.1414 3.83934 20.1125 3.53034 19.9119C3.22134 19.7113 3.06727 19.4195 3.06812 19.0367V13.8564L10.5121 12.0876L3.06812 10.3188V5.13853C3.06812 4.7548 3.22262 4.46307 3.53162 4.26332C3.84061 4.06357 4.16744 4.03422 4.51209 4.17527L20.4442 11.0994C20.8601 11.2965 21.0681 11.6277 21.0681 12.0929C21.0681 12.5572 20.8601 12.8848 20.4442 13.0758L4.51082 19.9986Z"
+                                fill="white" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <%- include('./layout/home-bar'); -%>
+
+        </section>
+
+    </div>
+
+    <!-- 要有動畫效果的chatbox內容 -->
+    <script>
+        window.messageText = [
+            { role: 'me', text: '職場、家庭' },
+            { role: 'robot', text: '同時承受職場與家庭的壓力，真的會讓人覺得沒有喘息的空間。' },
+            { role: 'robot', text: '想不想說說，是什麼事讓你今天感到特別難過和焦慮呢？' }
+        ];
+    </script>
+
+
+
+
+    <script type="module" src="../main.js"></script>
+
+</body>
+
+</html>

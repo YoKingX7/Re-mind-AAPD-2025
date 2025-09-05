@@ -1,0 +1,54 @@
+//emotion-sticker
+.emotionLG {
+    list-style-type: none;
+    scrollbar-width: none; //Firefox 把scrollbar隱藏
+
+    &::-webkit-scrollbar {
+        display: none; //Chrome, Safari, Edge 把scrollbar隱藏
+    }
+}
+
+.sticker {
+
+    &:hover,
+    :active {
+        background-color: $yellow-100 !important;
+        color: $black !important;
+        font-weight: 500;
+    }
+
+}
+
+.sticker.selected {
+    background-color: $yellow-100 !important;
+    color: $black !important;
+    font-weight: 500;
+}
+
+.stickerLG {
+    width: 80px;
+
+    img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.stickerSM {
+    width: 72px;
+
+    img {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+
+
+
+//emotion-reason
+.emotionR {
+    list-style: none;
+    font-size: 14px;
+    white-space: nowrap;
+}

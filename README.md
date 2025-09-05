@@ -283,3 +283,8 @@ $progress-bg: $white !default;
 
 
 ```
+
+### happy path 的 page順序
+chatroom-home > choosing-emotionLG > choosing-emotionSM > choosing-emotionR > 
+entering-diary1 > entering-diary2 > 
+choosing-nextStep > choosing-stressRelief > whether-stressRelief > sysRemind-stressRelief

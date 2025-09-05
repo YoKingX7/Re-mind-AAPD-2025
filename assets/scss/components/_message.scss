@@ -46,3 +46,14 @@
     opacity: 1;
     transform: translateY(0px);
 }
+
+.sysRemind-text {
+    width: fit-content !important;
+    color: $yellow-900;
+    background-color: $yellow-100;
+    font-size: 10px;
+    font-weight: 500;
+    align-self: center;
+    padding: 4px 16px;
+    border-radius: $border-radius-pill;
+}

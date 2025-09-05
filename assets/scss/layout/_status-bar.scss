@@ -1,6 +1,5 @@
 .status-bar {
-    width: 375px;
-    min-width: 320px;
+    // min-width: 320px;
     height: 54px;
 
     .time {
@@ -27,14 +26,10 @@
     }
 }
 
-@media(max-width: 500px) {
-    .status-bar {
-        width: 100%;
-        border-radius: 0px;
-        // top: 12px;
 
-        .dynamic-island {
-            display: none;
-        }
+@media(max-width: 500px) {
+
+    .dynamic-island {
+        display: none;
     }
 }

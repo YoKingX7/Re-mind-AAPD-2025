@@ -23,8 +23,8 @@
 
 <body>
 
-    <div class="view-section position-relative">
-        <section class="top-side overflow-hidden position-absolute bg-yellow-10 top-3 ">
+    <div class="view-section position-relative ">
+        <section class="top-side position-absolute bg-yellow-10 pt-3">
             <%- include('./layout/status-bar'); -%>
                 <%- include('./layout/chatroom-header'); -%>
         </section>
@@ -52,8 +52,10 @@
                     class="image-upload-btn rounded-circle bg-white d-flex justify-content-center align-items-center flex-shrink-0"
                     for="image-upload"><img src="/assets/image/icon/image.svg" alt="image-upload-btn"></label>
                 <input class="d-none" type="file" id="image-upload" accept="image/*">
-                <div class=" inputbar-default bg-white py-4 px-5 rounded-1 border border-gray-50 d-flex">
-                    <input type="text" class="border-0 w-100" placeholder="我跟你說唷：">
+                <div class=" inputbar-default bg-white py-4 px-5 rounded-1 border border-gray-50 d-flex w-100">
+                    <!-- <input type="text" class="border-0 w-100" placeholder="我跟你說唷："> -->
+                    <a href="#" class="flex-grow-1 text-gray-300">我跟你說唷：</a>
+
                     <div class="d-flex gap-3">
                         <a href="#"><img src="/assets/image/icon/ai.svg" alt="AI-robot"></a>
                         <a href="#"><img src="/assets/image/icon/sticker.svg" alt="emotionSM-sticker"></a>

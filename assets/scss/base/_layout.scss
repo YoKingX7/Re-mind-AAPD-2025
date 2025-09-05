@@ -1,5 +1,7 @@
 //body
 body {
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 
     ul {
@@ -9,7 +11,7 @@ body {
 
 //整個頁面-.view-section
 .view-section {
-    max-width: 396px;
+    width: 396px;
     height: 829px;
     margin: 0 auto;
     padding: 8px 8px 9px 11px;
@@ -17,7 +19,7 @@ body {
     background-image: url('/assets/image/bg/bg_chatroom.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: top center;
 
 
     &::before {
@@ -36,22 +38,49 @@ body {
     }
 
     .top-side {
-        max-width: 375px;
+        width: 375px;
         border-radius: 55px 55px 0px 0px;
+
     }
 
     .scroll-content {
-        max-width: 375px;
-        padding-top: 118px;
+        width: 100%;
+        padding-top: 126px;
         height: 606px;
         scrollbar-width: none;
     }
 
     .bottom-side {
-        max-width: 375px;
+        width: 375px;
     }
 }
 
+@media(max-width: 500px) {
+    .view-section {
+        width: 100%;
+        padding: 0;
+        background-size: cover;
+        border-radius: 0px;
+
+        &::before {
+            width: 100%;
+            display: none;
+        }
+
+        .top-side {
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        .bottom-side {
+            width: 100%;
+
+        }
+    }
+
+
+
+}
 
 //input(default/noEenter/enter)
 .image-upload-btn {

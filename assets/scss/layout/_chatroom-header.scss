@@ -1,15 +1,7 @@
 .chatroom-header {
-    width: 375px;
-    min-width: 320px;
     top: 54px;
 }
 
-@media(max-width: 500px) {
-    .chatroom-header {
-        width: 100%;
-        // top: 66px;
-    }
-}
 
 .avatar {
     width: 48px;

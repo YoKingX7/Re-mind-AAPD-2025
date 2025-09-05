@@ -24,10 +24,14 @@
 <body>
 
     <div class="view-section position-relative">
+
+        <!-- 頂部區域-->
         <section class="top-side position-absolute bg-yellow-10 pt-3 ">
             <%- include('./layout/status-bar'); -%>
                 <%- include('./layout/chatroom-header'); -%>
         </section>
+
+        <!-- 中間區域：訊息滾動-->
         <section class="scroll-content overflow-y-scroll ">
             <div class="message d-flex flex-column px-5 py-4" id="message-container">
                 <div class="chatbox-default robot">
@@ -39,7 +43,11 @@
 
             </div>
         </section>
+
+        <!-- 底部區域：系統提供的sticker/input-->
         <section class="bottom-side position-absolute bottom-0 pb-3">
+
+            <!-- sticker-LG -->
             <ul class="emotionLG d-flex px-5 mb-4 gap-4 flex-nowrap overflow-x-auto" id="single-selection-group">
                 <li class="sticker stickerLG d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 fs-8 text-gray-300 "
                     data-text="心情煩躁">
@@ -67,6 +75,8 @@
                     很棒
                 </li>
             </ul>
+
+            <!-- input-noEnter -->
             <div class="input-noEnter px-5 d-flex gap-3 ">
                 <input class="inputbar-noEnter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100"
                     id="inputbar-noEnter" type="text" placeholder="|" readonly>

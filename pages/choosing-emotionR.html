@@ -24,11 +24,15 @@
 <body>
 
     <div class="view-section position-relative">
+
+        <!-- 頂部區域-->
         <section class="top-side position-absolute bg-yellow-10 pt-3">
             <%- include('./layout/status-bar'); -%>
                 <%- include('./layout/chatroom-header'); -%>
         </section>
-        <section class="scroll-content overflow-y-scroll">
+
+        <!-- 中間區域：訊息滾動-->
+        <section class="scroll-content-R overflow-y-scroll">
             <div class="message d-flex flex-column px-5 py-4" id="message-container">
                 <div class="chatbox-default robot">
                     我剛剛從手錶讀到你的壓力指數比平常高一些
@@ -56,8 +60,12 @@
 
             </div>
         </section>
+
+        <!-- 底部區域：系統提供的sticker/input-->
         <section class="bottom-side position-absolute bottom-0 pb-3">
-            <ul class="emotionR d-flex justify-content-center flex-wrap px-5 mb-3 gap-3" id="multi-selection-group">
+
+            <!-- sticker-reseon -->
+            <ul class="emotionR d-flex justify-content-center flex-wrap px-5 mb-4 gap-3" id="multi-selection-group">
                 <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black"
                     data-text="職場">
                     職場
@@ -99,6 +107,8 @@
                     經濟
                 </li>
             </ul>
+
+            <!-- input-noEnter -->
             <div class="input-noEnter px-5 d-flex gap-3 ">
                 <input class="inputbar-noEnter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100"
                     id="inputbar-noEnter" type="text" placeholder="|" readonly>

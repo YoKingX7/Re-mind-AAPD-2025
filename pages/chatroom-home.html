@@ -24,10 +24,14 @@
 <body>
 
     <div class="view-section position-relative ">
+
+        <!-- 頂部區域-->
         <section class="top-side position-absolute bg-yellow-10 pt-3">
             <%- include('./layout/status-bar'); -%>
                 <%- include('./layout/chatroom-header'); -%>
         </section>
+
+        <!-- 中間區域：訊息滾動-->
         <section class="scroll-content overflow-y-scroll">
             <div class="message d-flex flex-column px-5 py-4" id="message-container">
                 <div class="chatbox-default robot">
@@ -39,7 +43,11 @@
 
             </div>
         </section>
+
+        <!-- 底部區域：系統提供的選項/input-->
         <section class="bottom-side position-absolute bottom-0 pb-3">
+
+            <!-- 系統建議選項 -->
             <div class="suggestion px-5 mb-4">
                 <a class="btn btn-primary w-100 fw-normal rounded-pill px-6 py-3 mb-3 bg-yellow-50"
                     href="choosing-emotionLG.html" role="button">紀錄今天的情緒</a>
@@ -47,31 +55,45 @@
                     role="button">幫我打打氣！</a>
 
             </div>
-            <div class="input-default px-5 d-flex gap-3 ">
-                <label
-                    class="image-upload-btn rounded-circle bg-white d-flex justify-content-center align-items-center flex-shrink-0"
-                    for="image-upload"><img src="/assets/image/icon/image.svg" alt="image-upload-btn"></label>
-                <input class="d-none" type="file" id="image-upload" accept="image/*">
-                <div class=" inputbar-default bg-white py-4 px-5 rounded-1 border border-gray-50 d-flex w-100">
-                    <!-- <input type="text" class="border-0 w-100" placeholder="我跟你說唷："> -->
-                    <a href="#" class="flex-grow-1 text-gray-300">我跟你說唷：</a>
 
-                    <div class="d-flex gap-3">
-                        <a href="#"><img src="/assets/image/icon/ai.svg" alt="AI-robot"></a>
-                        <a href="#"><img src="/assets/image/icon/sticker.svg" alt="emotionSM-sticker"></a>
-                        <a href="#"><img src="/assets/image/icon/voice.svg" alt="emotion-sticker"></a>
+            <!-- 輸入框：可替換 -->
+            <div class="input-wrapper position-relative">
+                <div class="input-default px-5 gap-3" id="input-default" style="display: flex;">
+                    <label
+                        class="image-upload-btn rounded-circle bg-white d-flex justify-content-center align-items-center flex-shrink-0"
+                        for="image-upload"><img src="/assets/image/icon/image.svg" alt="image-upload-btn"></label>
+                    <input class="d-none" type="file" id="image-upload" accept="image/*">
+                    <div class=" inputbar-default bg-white py-4 px-5 rounded-1 border border-gray-50 d-flex w-100"
+                        id="inputbar-default">
+                        <a href="#" class="flex-grow-1 text-gray-300">我跟你說唷：</a>
+                        <div class="d-flex gap-3">
+                            <a href="#"><img src="/assets/image/icon/ai.svg" alt="AI-robot"></a>
+                            <a href="#"><img src="/assets/image/icon/sticker.svg" alt="emotionSM-sticker"></a>
+                            <a href="#"><img src="/assets/image/icon/voice.svg" alt="emotion-sticker"></a>
+                        </div>
                     </div>
                 </div>
-
+                <div class="input-enter px-5 gap-3" id="input-enter" style="display: none;">
+                    <input class="inputbar-enter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100"
+                        id="inputbar-enter" type="text" readonly>
+                    <a class="text-send-btn rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.51082 19.9986C4.16617 20.1414 3.83934 20.1125 3.53034 19.9119C3.22134 19.7113 3.06727 19.4195 3.06812 19.0367V13.8564L10.5121 12.0876L3.06812 10.3188V5.13853C3.06812 4.7548 3.22262 4.46307 3.53162 4.26332C3.84061 4.06357 4.16744 4.03422 4.51209 4.17527L20.4442 11.0994C20.8601 11.2965 21.0681 11.6277 21.0681 12.0929C21.0681 12.5572 20.8601 12.8848 20.4442 13.0758L4.51082 19.9986Z"
+                                fill="white" />
+                        </svg></a>
+                </div>
             </div>
+
             <%- include('./layout/home-bar'); -%>
+
         </section>
 
     </div>
 
 
     <script type="module" src="../main.js"></script>
-
 
 </body>
 

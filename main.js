@@ -42,3 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+import { setupInputToggle } from './js/toggleInput.js';
+document.addEventListener('DOMContentLoaded', () => {
+    setupInputToggle();
+});
+
+

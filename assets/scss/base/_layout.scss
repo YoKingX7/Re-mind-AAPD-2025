@@ -105,3 +105,29 @@ body {
 
 
 }
+
+@media(max-width: 500px) {
+    .scroll-content {
+        margin-top: 0px;
+        padding-top: 126px;
+        height: calc(100vh - 132px); // = sticker110高 + 12px的margin-bottom + 想預留的間隔10px
+    }
+
+    .S-0 {
+        height: calc(100vh);
+    }
+
+    //適合suggestion*3
+    .S-3 {
+
+        height: calc(100vh - 172px); // = sticker150高 + 12px的margin-bottom + 想預留的間隔10px
+
+    }
+
+    //適合suggestion*4
+    .S-4 {
+
+        height: calc(100vh - 222px); // = sticker200高 + 12px的margin-bottom + 想預留的間隔10px
+
+    }
+}

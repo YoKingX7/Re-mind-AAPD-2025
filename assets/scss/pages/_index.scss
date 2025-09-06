@@ -38,6 +38,33 @@
 }
 
 
+@media(max-width: 500px) {
+  .view-section-index {
+    width: 100%;
+    padding: 0;
+    background-size: cover;
+    border-radius: 0px;
+
+    &::before {
+      width: 100%;
+      display: none;
+    }
+
+    .top-side {
+      width: 100%;
+      border-radius: 0px;
+    }
+
+    .bottom-side {
+      width: 100%;
+
+    }
+  }
+
+
+
+}
+
 .nav-item {
   font-size: 10px;
   color: $gray-200;

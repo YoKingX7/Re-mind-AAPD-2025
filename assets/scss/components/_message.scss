@@ -1,20 +1,10 @@
+//  聊天室不隨js動畫出現的對話框
 .chatbox-default {
     max-width: 250px;
     border-radius: 16px;
     padding: 8px 16px;
     margin-bottom: 12px;
     display: inline-block;
-}
-
-.chatbox-unshow {
-    max-width: 250px;
-    border-radius: 16px;
-    padding: 8px 16px;
-    margin-bottom: 12px;
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 0.3s ease;
 }
 
 .robot {
@@ -30,23 +20,57 @@
 }
 
 
+
+
+//  聊天室隨js動畫出現的對話框(
+.chatbox-unshow {
+    max-width: 250px;
+    border-radius: 16px;
+    padding: 8px 16px;
+    margin-bottom: 12px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 0.3s ease;
+}
+
+//  聊天室隨js動畫出現的對話框(出現）
 .chatbox-unshow.show {
     opacity: 1;
     transform: translateY(0px);
 }
 
+//  聊天室隨js動畫出現的文字(消失）
 .text-unshow {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s ease;
 }
 
-
+//  聊天室隨js動畫出現的文字(出現）
 .text-show {
     opacity: 1;
     transform: translateY(0px);
 }
 
+
+
+
+
+//系統提醒樣式-不隨js動畫出現
+.sysRemind-text-default {
+    width: fit-content !important;
+    color: $gray-300;
+    background-color: $yellow-100;
+    font-size: 10px;
+    font-weight: 500;
+    align-self: center;
+    padding: 4px 16px;
+    margin-bottom: 12px;
+    border-radius: $border-radius-pill;
+}
+
+//系統提醒樣式-隨js動畫出現
 .sysRemind-text {
     width: fit-content !important;
     color: $yellow-900;
@@ -55,5 +79,16 @@
     font-weight: 500;
     align-self: center;
     padding: 4px 16px;
+    margin-bottom: 12px;
     border-radius: $border-radius-pill;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+
+
+.sysRemind-text.show {
+    opacity: 1;
+    transform: translateY(0px);
 }

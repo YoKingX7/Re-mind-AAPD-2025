@@ -109,14 +109,7 @@
                 <div class="chatbox-default robot ">
                     如果你準備好了，我們就一起去高度－冥想靜心頁面吧！
                 </div>
-                <!-- <div class="chatbox-default me ">
-                    我準備好了！走吧！
-                </div> -->
 
-                <!-- 系統提示小文字-->
-                <div class="sysRemind-text" id="sysRemind-text">
-                    5秒後會自動跳轉至高度－冥想靜心頁面
-                </div>
             </div>
         </section>
 
@@ -144,8 +137,9 @@
                 </div>
                 <!-- input-enter -->
                 <div class="input-enter px-5 gap-3" id="input-enter" style="display: none;">
-                    <input class="inputbar-enter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100"
-                        id="inputbar-enter" type="text" readonly>
+                    <textarea class="inputbar-enter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100 "
+                        name="input-enter-content" id="inputbar-enter" cols="16">
+                    </textarea>
                     <a class="text-send-btn rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
                         href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -162,12 +156,23 @@
 
     </div>
 
-    <!-- 要有動畫效果的chatbox內容 -->
+
     <script>
+
+        //要有動畫效果的chatbox內容
         window.messageText = [
             { role: 'me', text: '我準備好了！走吧！' },
-
+            { role: 'system', text: '5秒後會自動跳轉至高度－冥想靜心頁面', styleType: 'sysRemind-text' },
         ];
+
+    </script>
+    <script>
+
+        // 5 秒後跳轉到 B 頁面
+        setTimeout(function () {
+            window.location.href = 'choosing-result.html'; // 替換成Ｂ頁面的網址
+        }, 5000); // 單位是毫秒，5000ms = 5秒
+
     </script>
 
 

@@ -13,3 +13,10 @@
 .inputbar-noEnter::placeholder {
     color: $yellow-500;
 }
+
+textarea {
+    resize: none;
+    height: 50px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}

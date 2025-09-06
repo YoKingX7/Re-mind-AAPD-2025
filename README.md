@@ -285,6 +285,10 @@ $progress-bg: $white !default;
 ```
 
 ### happy path 的 page順序
-chatroom-home > choosing-emotionLG > choosing-emotionSM > choosing-emotionR > 
-entering-diary1 > entering-diary2 > 
-choosing-nextStep > choosing-stressRelief > whether-stressRelief > sysRemind-stressRelief
+聊天室首頁：chatroom-home > 
+情緒貼圖選擇：choosing-emotionLG > choosing-emotionSM > choosing-emotionR > 
+手動輸入：entering-diary1 > entering-diary2 > 
+選擇舒壓：choosing-nextStep > choosing-stressRelief > whether-stressRelief > sysRemind-stressRelief > 
+(舒壓頁面)  > 
+舒壓結果與偏好：choosing-result > choosing-preferRelief > 
+離開聊天室：whether-finished > sysRemind-finished

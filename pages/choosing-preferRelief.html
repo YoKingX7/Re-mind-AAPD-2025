@@ -100,6 +100,22 @@
                 <div class="chatbox-default robot ">
                     如果不確定從哪個開始，我會推薦你先試試高度－冥想靜心！
                 </div>
+                <div class="chatbox-default me ">
+                    高度－冥想靜心
+                </div>
+                <div class="chatbox-default robot ">
+                    太好了！高度－冥想靜心是很深層的放鬆方式。
+                </div>
+                <div class="chatbox-default robot ">
+                    如果你準備好了，我們就一起去高度－冥想靜心頁面吧！
+                </div>
+                <div class="chatbox-default me ">
+                    我準備好了！走吧！
+                </div>
+                <div class="chatbox-default robot ">
+                    現在有感覺比較放鬆一點嗎?
+                </div>
+
 
 
             </div>
@@ -108,48 +124,46 @@
         <!-- 底部區域：系統提供的選項/input-->
         <section class="bottom-side position-absolute bottom-0 pb-3">
 
-            <!-- 系統建議選項 -->
-            <div class="suggestion px-5 mb-4">
-                <a class="btn btn-primary w-100 fw-normal rounded-pill px-6 py-3 mb-3 bg-yellow-50"
-                    href="./sysRemind-stressRelief.html" role="button">我準備好了！走吧！</a>
-                <a class="btn btn-primary w-100 fw-normal rounded-pill px-6 py-3 mb-3 bg-yellow-50"
-                    href="./choosing-stressRelief.html" role="button">等等！我想重選一種放鬆方式</a>
-            </div>
+            <!-- sticker-reseon -->
+            <ul class="emotionR d-flex justify-content-center flex-wrap px-5 mb-4 gap-3" id="multi-selection-group">
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black"
+                    data-text="紓壓敲擊">
+                    紓壓敲擊
+                </li>
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="深呼吸">
+                    深呼吸
+                </li>
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="冥想靜心">
+                    冥想靜心
+                </li>
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="休息走動">
+                    休息走動
+                </li>
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="書寫日記">
+                    書寫日記
+                </li>
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="沒有特別喜好">
+                    沒有特別喜好
+                </li>
 
+            </ul>
 
-
-            <!-- 輸入框：可替換 -->
-            <div class="input-wrapper position-relative">
-
-                <!-- input-default -->
-                <div class="input-default px-5 gap-3" id="input-default" style="display: flex;">
-                    <label
-                        class="image-upload-btn rounded-circle bg-white d-flex justify-content-center align-items-center flex-shrink-0"
-                        for="image-upload"><img src="/assets/image/icon/image.svg" alt="image-upload-btn"></label>
-                    <input class="d-none" type="file" id="image-upload" accept="image/*">
-                    <div class=" inputbar-default bg-white py-4 px-5 rounded-1 border border-gray-50 d-flex w-100"
-                        id="inputbar-default">
-                        <a href="#" class="flex-grow-1 text-gray-300">我跟你說唷：</a>
-                        <div class="d-flex gap-3">
-                            <a href="#"><img src="/assets/image/icon/ai.svg" alt="AI-robot"></a>
-                            <a href="#"><img src="/assets/image/icon/sticker.svg" alt="emotionSM-sticker"></a>
-                            <a href="#"><img src="/assets/image/icon/voice.svg" alt="emotion-sticker"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- input-enter -->
-                <div class="input-enter px-5 gap-3" id="input-enter" style="display: none;">
-                    <textarea class="inputbar-enter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100 "
-                        name="input-enter-content" id="inputbar-enter" cols="16">
-                    </textarea>
-                    <a class="text-send-btn rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                        href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.51082 19.9986C4.16617 20.1414 3.83934 20.1125 3.53034 19.9119C3.22134 19.7113 3.06727 19.4195 3.06812 19.0367V13.8564L10.5121 12.0876L3.06812 10.3188V5.13853C3.06812 4.7548 3.22262 4.46307 3.53162 4.26332C3.84061 4.06357 4.16744 4.03422 4.51209 4.17527L20.4442 11.0994C20.8601 11.2965 21.0681 11.6277 21.0681 12.0929C21.0681 12.5572 20.8601 12.8848 20.4442 13.0758L4.51082 19.9986Z"
-                                fill="white" />
-                        </svg></a>
-                </div>
+            <!-- input-noEnter -->
+            <div class="input-noEnter px-5 d-flex gap-3 ">
+                <input class="inputbar-noEnter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100"
+                    id="inputbar-noEnter" type="text" placeholder="|" readonly>
+                <a class="text-send-btn rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                    href="./whether-finished.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.51082 19.9986C4.16617 20.1414 3.83934 20.1125 3.53034 19.9119C3.22134 19.7113 3.06727 19.4195 3.06812 19.0367V13.8564L10.5121 12.0876L3.06812 10.3188V5.13853C3.06812 4.7548 3.22262 4.46307 3.53162 4.26332C3.84061 4.06357 4.16744 4.03422 4.51209 4.17527L20.4442 11.0994C20.8601 11.2965 21.0681 11.6277 21.0681 12.0929C21.0681 12.5572 20.8601 12.8848 20.4442 13.0758L4.51082 19.9986Z"
+                            fill="white" />
+                    </svg></a>
             </div>
 
             <%- include('./layout/home-bar'); -%>
@@ -158,13 +172,17 @@
 
     </div>
 
-    <!-- 要有動畫效果的chatbox內容 -->
+
     <script>
+
+        //要有動畫效果的chatbox內容
         window.messageText = [
-            { role: 'me', text: '高度－冥想靜心' },
-            { role: 'robot', text: '太好了！高度－冥想靜心是很深層的放鬆方式。' },
-            { role: 'robot', text: '如果你準備好了，我們就一起去高度－冥想靜心頁面吧！' }
+            { role: 'me', text: '有舒緩一點' },
+            { role: 'robot', text: '為了之後可以推薦更適合的放鬆方式，我想知道你偏好哪種類型的放鬆方式～' },
         ];
+
+
+
     </script>
 
 

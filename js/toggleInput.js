@@ -24,6 +24,13 @@ export function setupInputToggle() {
         }
     });
 
+    // 調整textarea的高度，初始為50px, 之後隨著內容變高
+    const textarea = document.getElementById('inputbar-enter');
+    textarea.addEventListener('input', () => {
+        textarea.style.height = 'auto'; // 先清除原本高度，避免越來越高
+        textarea.style.height = Math.min(textarea.scrollHeight, 200) + 'px'; // 限制最大高度
+    });
+
     // 點擊 input-enter 裡面時不要觸發還原
     inputEnter.addEventListener('click', function (e) {
         e.stopPropagation();

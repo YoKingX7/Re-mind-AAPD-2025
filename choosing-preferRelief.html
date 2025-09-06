@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>選擇具體情緒</title>
+    <title>繼續輸入日記</title>
 
-    <!-- 以下語法：因為重整會出現html還沒加載css樣式，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
+    <!-- 以下語法：因為重整會出現html還沒加載css樣式，過1秒才後，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
     <style>
         body {
             visibility: hidden;
@@ -25,7 +25,7 @@
 
 <body>
 
-    <div class="view-section position-relative">
+    <div class="view-section position-relative ">
 
         <!-- 頂部區域-->
         <section class="top-side position-absolute bg-yellow-10 pt-3">
@@ -79,36 +79,106 @@
                 <div class="chatbox-default robot ">
                     先挑選一個最貼近你現在感受的情緒～
                 </div>
+                <div class="chatbox-default me ">
+                    普普通通
+                </div>
+                <div class="chatbox-default robot ">
+                    接下來我們一起來探索更具體的情緒～
+                </div>
+                <div class="chatbox-default me ">
+                    難過、焦慮
+                </div>
+                <div class="chatbox-default robot ">
+                    我明白了。這樣的感受真的不容易，謝謝你願意說出來。
+                </div>
+                <div class="chatbox-default robot ">
+                    那你覺得這些情緒可能來自於哪個面向呢？
+                </div>
+                <div class="chatbox-default me ">
+                    職場、家庭
+                </div>
+                <div class="chatbox-default robot ">
+                    同時承受職場與家庭的壓力，真的會讓人覺得沒有喘息的空間。
+                </div>
+                <div class="chatbox-default robot ">
+                    想不想說說，是什麼事讓你今天感到特別難過和焦慮呢？
+                </div>
+                <div class="chatbox-default me ">
+                    主管臨時塞我一個急件，真的煩死，我自己事情就做不完了。那個部門的皇親國戚又在推工作，氣到不行。
+                </div>
+                <div class="chatbox-default me ">
+                    然後早上小孩忘記帶作業，我還要回家幫他送，整個早上像打仗一樣。
+                </div>
+                <div class="chatbox-default robot ">
+                    聽起來你今天真的很不容易，工作壓力大還要處理家庭的突發狀況，這樣的早晨一定讓人感覺很疲憊。
+                </div>
+                <div class="chatbox-default robot ">
+                    謝謝你告訴我這些，分享自己的心情真的很不容易。
+                </div>
+                <div class="chatbox-default robot ">
+                    如果你想，我們可以一起做些簡單的放鬆練習，或者你也可以告訴我更多發生的事情和你的感覺，聊聊這些經歷，或許會讓你覺得輕鬆一點。
+                </div>
+                <div class="chatbox-default me ">
+                    我需要放鬆一下
+                </div>
+                <div class="chatbox-default robot ">
+                    沒問題～
+                </div>
+                <div class="chatbox-default robot ">
+                    我這邊準備了幾個放鬆方式，你可以挑一個試試看。
+                </div>
+                <div class="chatbox-default robot ">
+                    如果不確定從哪個開始，我會推薦你先試試高度－冥想靜心！
+                </div>
+                <div class="chatbox-default me ">
+                    高度－冥想靜心
+                </div>
+                <div class="chatbox-default robot ">
+                    太好了！高度－冥想靜心是很深層的放鬆方式。
+                </div>
+                <div class="chatbox-default robot ">
+                    如果你準備好了，我們就一起去高度－冥想靜心頁面吧！
+                </div>
+                <div class="chatbox-default me ">
+                    我準備好了！走吧！
+                </div>
+                <div class="chatbox-default robot ">
+                    現在有感覺比較放鬆一點嗎?
+                </div>
+
 
 
             </div>
         </section>
 
-        <!-- 底部區域：系統提供的sticker/input-->
+        <!-- 底部區域：系統提供的選項/input-->
         <section class="bottom-side position-absolute bottom-0 pb-3">
 
-            <!-- sticker-SM -->
-            <ul class="emotionSM d-flex justify-content-center flex-nowrap mb-4 gap-3 overflow-x-auto "
-                id="multi-selection-group">
-                <li class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 text-gray-300 "
-                    data-text="放鬆">
-                    <img src="/Re-mind-AAPD-2025/assets/Relax-CFqSrkoG.png" alt="Relax">
-                    放鬆
+            <!-- sticker-reseon -->
+            <ul class="emotionR d-flex justify-content-center flex-wrap px-5 mb-4 gap-3" id="multi-selection-group">
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black"
+                    data-text="紓壓敲擊">
+                    紓壓敲擊
                 </li>
-                <li class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 text-gray-300 "
-                    data-text="平靜">
-                    <img src="/Re-mind-AAPD-2025/assets/Ordinary-ZGk5R11x.png" alt="Ordinary">
-                    平靜
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="深呼吸">
+                    深呼吸
                 </li>
-                <li class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 text-gray-300 "
-                    data-text="難過">
-                    <img src="/Re-mind-AAPD-2025/assets/Sad-BQjrYz9g.png" alt="Sad">
-                    難過
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="冥想靜心">
+                    冥想靜心
                 </li>
-                <li class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10 text-gray-300 "
-                    data-text="焦慮">
-                    <img src="/Re-mind-AAPD-2025/assets/Anxious-Bk2g5ct9.png" alt="Anxious">
-                    焦慮
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="休息走動">
+                    休息走動
+                </li>
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="書寫日記">
+                    書寫日記
+                </li>
+                <li class="sticker stickerR py-3 px-4 border border-yellow-500 rounded-2 bg-yellow-10 text-black "
+                    data-text="沒有特別喜好">
+                    沒有特別喜好
                 </li>
 
             </ul>
@@ -118,33 +188,37 @@
                 <input class="inputbar-noEnter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100"
                     id="inputbar-noEnter" type="text" placeholder="|" readonly>
                 <a class="text-send-btn rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                    href="./choosing-emotionR.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    href="./whether-finished.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M4.51082 19.9986C4.16617 20.1414 3.83934 20.1125 3.53034 19.9119C3.22134 19.7113 3.06727 19.4195 3.06812 19.0367V13.8564L10.5121 12.0876L3.06812 10.3188V5.13853C3.06812 4.7548 3.22262 4.46307 3.53162 4.26332C3.84061 4.06357 4.16744 4.03422 4.51209 4.17527L20.4442 11.0994C20.8601 11.2965 21.0681 11.6277 21.0681 12.0929C21.0681 12.5572 20.8601 12.8848 20.4442 13.0758L4.51082 19.9986Z"
                             fill="white" />
                     </svg></a>
             </div>
+
             <div class="home-bar">
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAAAiCAYAAACk9JkOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7dRBEcJAEETRBiVIwAISkIBS1gE4SiaVQyrJPYfd96q+g+lJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4e1beapOqX9Sbo2C2MYBnzM7Bp1St0y3MfwxQ4s/+O3cMIWmDvH7rmuY/hE2Nm06p3AAAAAAAAAAAAAAAALjIDdMeKJRv89mwAAAAASUVORK5CYII=" alt="home-bar">
-</div>        </section>
+</div>
+        </section>
 
     </div>
 
 
-
-    <!-- 要有動畫效果的chatbox內容 -->
     <script>
+
+        //要有動畫效果的chatbox內容
         window.messageText = [
-            { role: 'me', text: '普普通通' },
-            { role: 'robot', text: '接下來我們一起來探索更具體的情緒～' }
+            { role: 'me', text: '有舒緩一點' },
+            { role: 'robot', text: '為了之後可以推薦更適合的放鬆方式，我想知道你偏好哪種類型的放鬆方式～' },
         ];
+
+
+
     </script>
 
 
-    <script src="/js/mutiSelect.js"></script>
 
-    <!-- 匯入 Vite 主入口 JS -->
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>聊天室首頁</title>
+    <title>繼續輸入日記</title>
 
     <!-- 以下語法：因為重整會出現html還沒加載css樣式，過1秒才後，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
     <style>
@@ -70,6 +70,90 @@
                 <div class="chatbox-default robot ">
                     想寫下今天的心情，還是單純跟我聊聊呢？我都在這裡陪你。
                 </div>
+                <div class="chatbox-default me">
+                    紀錄今天的情緒
+                </div>
+                <div class="chatbox-default robot ">
+                    好啊！
+                </div>
+                <div class="chatbox-default robot ">
+                    先挑選一個最貼近你現在感受的情緒～
+                </div>
+                <div class="chatbox-default me ">
+                    普普通通
+                </div>
+                <div class="chatbox-default robot ">
+                    接下來我們一起來探索更具體的情緒～
+                </div>
+                <div class="chatbox-default me ">
+                    難過、焦慮
+                </div>
+                <div class="chatbox-default robot ">
+                    我明白了。這樣的感受真的不容易，謝謝你願意說出來。
+                </div>
+                <div class="chatbox-default robot ">
+                    那你覺得這些情緒可能來自於哪個面向呢？
+                </div>
+                <div class="chatbox-default me ">
+                    職場、家庭
+                </div>
+                <div class="chatbox-default robot ">
+                    同時承受職場與家庭的壓力，真的會讓人覺得沒有喘息的空間。
+                </div>
+                <div class="chatbox-default robot ">
+                    想不想說說，是什麼事讓你今天感到特別難過和焦慮呢？
+                </div>
+                <div class="chatbox-default me ">
+                    主管臨時塞我一個急件，真的煩死，我自己事情就做不完了。那個部門的皇親國戚又在推工作，氣到不行。
+                </div>
+                <div class="chatbox-default me ">
+                    然後早上小孩忘記帶作業，我還要回家幫他送，整個早上像打仗一樣。
+                </div>
+                <div class="chatbox-default robot ">
+                    聽起來你今天真的很不容易，工作壓力大還要處理家庭的突發狀況，這樣的早晨一定讓人感覺很疲憊。
+                </div>
+                <div class="chatbox-default robot ">
+                    謝謝你告訴我這些，分享自己的心情真的很不容易。
+                </div>
+                <div class="chatbox-default robot ">
+                    如果你想，我們可以一起做些簡單的放鬆練習，或者你也可以告訴我更多發生的事情和你的感覺，聊聊這些經歷，或許會讓你覺得輕鬆一點。
+                </div>
+                <div class="chatbox-default me ">
+                    我需要放鬆一下
+                </div>
+                <div class="chatbox-default robot ">
+                    沒問題～
+                </div>
+                <div class="chatbox-default robot ">
+                    我這邊準備了幾個放鬆方式，你可以挑一個試試看。
+                </div>
+                <div class="chatbox-default robot ">
+                    如果不確定從哪個開始，我會推薦你先試試高度－冥想靜心！
+                </div>
+                <div class="chatbox-default me ">
+                    高度－冥想靜心
+                </div>
+                <div class="chatbox-default robot ">
+                    太好了！高度－冥想靜心是很深層的放鬆方式。
+                </div>
+                <div class="chatbox-default robot ">
+                    如果你準備好了，我們就一起去高度－冥想靜心頁面吧！
+                </div>
+                <div class="chatbox-default me ">
+                    我準備好了！走吧！
+                </div>
+                <div class="chatbox-default robot ">
+                    現在有感覺比較放鬆一點嗎?
+                </div>
+                <div class="chatbox-default me ">
+                    有舒緩一點
+                </div>
+                <div class="chatbox-default robot ">
+                    為了之後可以推薦更適合的放鬆方式，我想知道你偏好哪種類型的放鬆方式～
+                </div>
+
+
+
 
             </div>
         </section>
@@ -79,15 +163,20 @@
 
             <!-- 系統建議選項 -->
             <div class="suggestion px-5 mb-4">
+                <a class="btn btn-primary w-100 fw-normal rounded-pill px-6 py-3 mb-3 bg-yellow-50" href="#"
+                    role="button">好啊！</a>
                 <a class="btn btn-primary w-100 fw-normal rounded-pill px-6 py-3 mb-3 bg-yellow-50"
-                    href="choosing-emotionLG.html" role="button">紀錄今天的情緒</a>
-                <a class="btn btn-primary w-100 fw-normal rounded-pill px-6 py-3 bg-yellow-50" href="#"
-                    role="button">幫我打打氣！</a>
-
+                    href="./sysRemind-finished.html" role="button">先這樣，毛毛掰掰～</a>
             </div>
+
+
+
+
 
             <!-- 輸入框：可替換 -->
             <div class="input-wrapper position-relative">
+
+                <!-- input-default -->
                 <div class="input-default px-5 gap-3" id="input-default" style="display: flex;">
                     <label
                         class="image-upload-btn rounded-circle bg-white d-flex justify-content-center align-items-center flex-shrink-0"
@@ -103,6 +192,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- input-enter -->
                 <div class="input-enter px-5 gap-3" id="input-enter" style="display: none;">
                     <textarea class="inputbar-enter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100 "
                         name="input-enter-content" id="inputbar-enter" cols="16">
@@ -123,6 +213,23 @@
         </section>
 
     </div>
+
+
+    <script>
+
+        //要有動畫效果的chatbox內容
+        window.messageText = [
+            { role: 'me', text: '深呼吸、冥想靜心' },
+            { role: 'robot', text: '好的！我已經記下你的喜好了！' },
+            { role: 'robot', text: '還想繼續聊聊嗎？' },
+        ];
+
+
+
+
+
+    </script>
+
 
 
 

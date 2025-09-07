@@ -1,0 +1,51 @@
+:root {
+    --cream: #fcfaf5; /* 背景米白 */
+    --accent: #f3c152; /* 虛線／分隔線顏色 */
+    --text: #1b1b1b;
+}
+/* Hero 區塊 */
+.hero {
+    position: relative;
+    min-height: 52vh; /* 給角色一個高度空間 */
+    display: flex;
+    align-items: center; /* 讓對話框垂直置中對齊角色 */
+    gap: 16px;
+}
+
+/* 對話框（虛線＋圓角） */
+.bubble {
+    margin-left: auto; /* 讓對話框靠右 */
+    max-width: 68vw; /* 寬度像圖中約 2/3 */
+    border: 3px dashed var(--accent);
+    border-radius: 24px;
+    padding: 20px 28px;
+    line-height: 1.4;
+    font-weight: 700;
+    font-size: clamp(18px, 5vw, 36px);
+    background: rgba(255, 255, 255, 0.55); /* 讓虛線更清楚、微玻璃感 */
+    backdrop-filter: blur(1px);
+}
+
+/* 角色圖 */
+.character {
+    position: absolute;
+    left: 16px;
+    bottom: 0; /* 貼齊左下角 */
+    width: min(46vw, 360px); /* 隨螢幕縮放 */
+    pointer-events: none;
+    user-select: none;
+}
+.character img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 底部分隔線 */
+.divider {
+    margin-top: 20px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 4px;
+    opacity: 0.6;
+}

@@ -1,54 +1,62 @@
 //emotion-sticker
 .emotionLG {
-    list-style-type: none;
-    scrollbar-width: none; //Firefox 把scrollbar隱藏
+  list-style-type: none;
+  scrollbar-width: none; //Firefox 把scrollbar隱藏
 
-    &::-webkit-scrollbar {
-        display: none; //Chrome, Safari, Edge 把scrollbar隱藏
-    }
+  &::-webkit-scrollbar {
+    display: none; //Chrome, Safari, Edge 把scrollbar隱藏
+  }
 }
+//測試sticker隨對話框一起出現
+// #single-selection-group.preload {
+//   transition: none !important;
+// }
+// #single-selection-group {
+//   opacity: 0;
+//   transform: translateY(20px);
+//   transition: all 0.3s ease;
+// }
+// #single-selection-group.show {
+//   opacity: 1;
+//   transform: translateY(0px);
+// }
 
 .sticker {
-
-    &:hover,
-    :active {
-        background-color: $yellow-100 !important;
-        color: $black !important;
-        font-weight: 500;
-    }
-
-}
-
-.sticker.selected {
+  &:hover,
+  :active {
     background-color: $yellow-100 !important;
     color: $black !important;
     font-weight: 500;
+  }
+}
+
+.sticker.selected {
+  background-color: $yellow-100 !important;
+  color: $black !important;
+  font-weight: 500;
 }
 
 .stickerLG {
-    width: 80px;
+  width: 80px;
 
-    img {
-        width: 64px;
-        height: 64px;
-    }
+  img {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .stickerSM {
-    width: 72px;
+  width: 72px;
 
-    img {
-        width: 56px;
-        height: 56px;
-    }
+  img {
+    width: 56px;
+    height: 56px;
+  }
 }
-
-
-
 
 //emotion-reason
 .emotionR {
-    list-style: none;
-    font-size: 14px;
-    white-space: nowrap;
+  list-style: none;
+  font-size: 14px;
+  white-space: nowrap;
 }

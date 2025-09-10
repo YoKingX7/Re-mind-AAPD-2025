@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>冥想靜心-Step1</title>
+    </head>
+    <body>
+        <!-- meditation-1.html -->
+        <main class="view-section position-relative">
+            <!-- 頂部 -->
+            <section class="top-side pt-3">
+                <%- include('./layout/status-bar'); -%>
+            </section>
+
+            <section class="px-5 pt-11 pb-113">
+                <div
+                    class="d-flex justify-content-center align-items-center w-100 mb-6"
+                >
+                    <img
+                        src="/assets/image/Character/character_normal.png"
+                        alt="character_normal"
+                        height="343px"
+                    />
+                </div>
+                <!-- Character 聊聊標籤 -->
+                <div class="d-flex justify-content-center">
+                    <div
+                        class="position-relative py-3 px-6 rounded-3 bg-white d-inline-flex shadow-lg"
+                    >
+                        <p class="fs-7 text-gray-900 lh-base">
+                            今天的冥想想要選哪種聲音陪伴你呢？
+                        </p>
+                        <svg
+                            width="2em"
+                            height="2em"
+                            viewBox="0 0 16 16"
+                            class="position-absolute top-0 start-50 translate-middle mb-1"
+                            fill="var(--bs-white)"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M7.247 4.86L2.451 10.342C1.885 10.987 2.345 12 3.204 12h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mx-5">
+                <div class="mb-5 d-flex">
+                    <div
+                        class="border border-white rounded-3 bg-white py-4 px-6 shadow ms-15-5 me-3"
+                    >
+                        <a href="#">
+                            <img
+                                src="/assets/image/icon/people_speak.svg"
+                                alt="people_speak"
+                            />
+                        </a>
+                    </div>
+                    <div
+                        class="border border-white rounded-3 bg-white py-4 px-6 shadow me-3"
+                    >
+                        <a href="#">
+                            <img src="/assets/image/icon/rain.svg" alt="rain" />
+                        </a>
+                    </div>
+                    <div
+                        class="border border-white rounded-3 bg-white py-4 px-6 shadow me-3"
+                    >
+                        <a href="#">
+                            <img
+                                src="/assets/image/icon/camp_fire.svg"
+                                alt="camp_fire"
+                            />
+                        </a>
+                    </div>
+                    <div
+                        class="border border-white rounded-3 bg-white py-4 px-6 shadow me-15-5"
+                    >
+                        <a href="#">
+                            <img
+                                src="/assets/image/icon/volumeOff.svg"
+                                alt="volumeOff"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <a
+                        href="#"
+                        class="bg-red-500 py-4 w-100 d-flex justify-content-center align-items-center rounded-pill"
+                    >
+                        <img src="/assets/image/icon/phone.svg" alt="phone" />
+                    </a>
+                </div>
+            </section>
+
+            <!-- 底部 -->
+            <section class="bottom-side position-absolute bottom-0 pb-3">
+                <%- include('./layout/home-bar'); -%>
+            </section>
+        </main>
+
+        <script type="module" src="../main.js"></script>
+    </body>
+</html>

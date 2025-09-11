@@ -4,23 +4,23 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>冥想靜心-Step3</title>
+        <title>冥想靜心-Step4</title>
     </head>
     <body>
-        <!-- meditation-3.html -->
+        <!-- meditation-4.html -->
         <main class="view-section position-relative">
             <!-- 頂部 -->
             <section class="top-side pt-3">
                 <%- include('./layout/status-bar'); -%>
             </section>
 
-            <section class="px-5 pt-11 pb-113">
+            <section class="px-5 pt-11 pb-89">
                 <div
                     class="d-flex justify-content-center align-items-center w-100 mb-6"
                 >
                     <img
-                        src="/assets/image/Character/character_normal.png"
-                        alt="character_normal"
+                        src="/assets/image/Character/character_meditation.png"
+                        alt="character_meditation"
                         height="343px"
                     />
                 </div>
@@ -30,7 +30,7 @@
                         class="position-relative py-3 px-6 rounded-3 bg-white d-inline-flex shadow-lg"
                     >
                         <p class="fs-6 fw-normal text-gray-900 lh-base">
-                            準備好了嗎？好的話就開始計時囉！
+                            輕輕地閉上眼睛，放鬆肩膀
                         </p>
                         <svg
                             width="2em"
@@ -49,33 +49,50 @@
                 </div>
             </section>
 
-            <section class="mx-5">
-                <div class="mb-5 d-flex justify-content-center">
-                    <div>
-                        <a
-                            href="meditation-4.html"
-                            class="bg-white py-4 px-6 shadow me-3 rounded-3 d-flex justify-content-center align-items-center"
-                        >
-                            <p class="fs-6 fw-normal text-gray-900 lh-base">
-                                開始計時吧！
-                            </p>
-                        </a>
+            <section class="px-5 pt-5 pb-6">
+                <div
+                    class="mb-5 d-flex justify-content-center align-items-center"
+                >
+                    <div
+                        class="bg-yellow-10 py-4 px-6 d-flex justify-content-center align-items-center rounded-pill border-timing"
+                    >
+                        <p class="fs-1 fw-bold lh-sm text-yellow-900">03:00</p>
                     </div>
                 </div>
                 <div class="d-flex">
                     <!-- 返回小圓按鈕 -->
                     <a
-                        href="meditation-2.html"
-                        class="bg-white d-flex justify-content-center align-items-center rounded-circle me-3 shadow"
+                        href="meditation-3.html"
+                        class="bg-white d-flex justify-content-center align-items-center rounded-circle ms-39-5 me-6 shadow"
                         style="width: 48px; height: 48px"
                     >
                         <img src="/assets/image/icon/back.svg" alt="back" />
                     </a>
+                    <!-- 暫停小圓按鈕 -->
+                    <a
+                        href="#"
+                        class="bg-white d-flex justify-content-center align-items-center rounded-circle me-6 shadow"
+                        style="width: 48px; height: 48px"
+                    >
+                        <img src="/assets/image/icon/pause.svg" alt="pause" />
+                    </a>
+                    <!-- 聲音小圓按鈕 -->
+                    <a
+                        href="#"
+                        class="bg-white d-flex justify-content-center align-items-center rounded-circle me-6 shadow"
+                        style="width: 48px; height: 48px"
+                    >
+                        <img
+                            src="/assets/image/icon/volumeOn.svg"
+                            alt="volumeOn"
+                        />
+                    </a>
 
-                    <!-- 紅色膠囊按鈕 -->
+                    <!-- 紅色小圓按鈕 -->
                     <a
                         href="stress-relief-guidance-1.html"
-                        class="bg-red-500 py-4 flex-grow-1 d-flex justify-content-center align-items-center rounded-pill shadow"
+                        class="bg-red-500 d-flex justify-content-center align-items-center rounded-pill me-39-5 shadow"
+                        style="width: 48px; height: 48px"
                     >
                         <img src="/assets/image/icon/phone.svg" alt="phone" />
                     </a>

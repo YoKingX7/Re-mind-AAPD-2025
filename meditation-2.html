@@ -1,31 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>選擇具體情緒</title>
-
-    <!-- 以下語法：因為重整會出現html還沒加載css樣式，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
-    <style>
-      body {
-        visibility: hidden;
-      }
-    </style>
-    <script>
-      window.addEventListener("load", () => {
-        document.body.style.visibility = "visible";
-      });
-    </script>
-    <script type="module" crossorigin src="/Re-mind-AAPD-2025/assets/main-Ck1sedAk.js"></script>
-    <link rel="stylesheet" crossorigin href="/Re-mind-AAPD-2025/assets/main-DyNAgV8Q.css">
-  </head>
-
-  <body>
-    <div class="view-section position-relative">
-      <!-- 頂部區域-->
-      <section class="top-side position-absolute bg-yellow-10 pt-3">
-        <div class="status-bar z-1">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>冥想靜心-Step2</title>
+      <script type="module" crossorigin src="/Re-mind-AAPD-2025/assets/main-Ck1sedAk.js"></script>
+      <link rel="stylesheet" crossorigin href="/Re-mind-AAPD-2025/assets/main-DyNAgV8Q.css">
+    </head>
+    <body>
+        <!-- meditation-2.html -->
+        <main class="view-section position-relative">
+            <!-- 頂部 -->
+            <section class="top-side pt-3">
+                <div class="status-bar z-1">
     <div class="container">
         <div class="row h-100 align-items-center">
             <div class="col-4 p-0 d-flex justify-content-center align-items-center"><time class="time"
@@ -43,116 +31,102 @@
         </div>
     </div>
 
-</div> <header class="chatroom-header d-flex align-items-center py-3 px-5 gap-3 bg-yellow-10 shadow">
-    <div class="icon p-1">
-        <a href="index.html"><img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.7048%2018.0513C16.0951%2018.4974%2016.0951%2019.2195%2015.7048%2019.6655C15.3145%2020.1115%2014.6826%2020.1115%2014.2922%2019.6655L8.2903%2012.8071C7.89998%2012.361%207.89998%2011.639%208.2903%2011.1929L14.2922%204.33452C14.6826%203.88849%2015.3145%203.88849%2015.7048%204.33452C16.0951%204.78054%2016.0951%205.50263%2015.7048%205.94865L10.4092%2012L15.7048%2018.0513Z'%20fill='%230B0B0A'/%3e%3c/svg%3e" alt="icon-Chevron_Left"></a>
-    </div>
-    <div class="avatar rounded-circle border border-yellow-100 d-flex align-items-center">
-        <img class="rounded-circle" src="/Re-mind-AAPD-2025/assets/mood_notbad-DWywvl4i.png" alt="avatar">
-    </div>
-    <p class="fs-4 lh-sm ">毛毛</p>
-    <p class="online fs-7 text-gray-300">上線中</p>
-    <div class="icon p-1 ms-auto">
-        <a href="#"><img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.9976%2017.002C13.1022%2017.002%2013.9976%2017.8973%2013.9976%2019.002C13.9976%2020.1066%2013.1022%2021.002%2011.9976%2021.002C10.8929%2021.002%209.99756%2020.1066%209.99756%2019.002C9.99756%2017.8973%2010.8929%2017.002%2011.9976%2017.002ZM11.9966%2019.0029H11.9985V19.001H11.9966V19.0029ZM11.9976%2010.001C13.1021%2010.001%2013.9973%2010.896%2013.9976%2012C13.9976%2013.1042%2013.1023%2014%2011.9976%2014C10.8929%2013.9999%209.99756%2013.1042%209.99756%2012C9.99782%2010.8961%2010.8931%2010.0011%2011.9976%2010.001ZM11.9966%2012.001H11.9985V11.999H11.9966V12.001ZM11.9976%203.00098C13.1023%203.00098%2013.9976%203.89577%2013.9976%205C13.9974%206.1041%2013.1022%206.99902%2011.9976%206.99902C10.893%206.99893%209.99771%206.10405%209.99756%205C9.99756%203.89583%2010.8929%203.00107%2011.9976%203.00098ZM11.9966%205.00098H11.9985V4.99902H11.9966V5.00098Z'%20fill='%230B0B0A'/%3e%3c/svg%3e" alt="icon-more">
-    </div></a>
-</header>      </section>
+</div>            </section>
 
-      <!-- 中間區域：訊息滾動-->
-      <section class="scroll-content overflow-y-scroll">
-        <div
-          class="message d-flex flex-column px-5 py-4"
-          id="message-container"
-        >
-          <div class="chatbox-default robot">
-            我剛剛從手錶讀到你的壓力指數比平常高一些
-          </div>
-          <div class="chatbox-default robot">
-            想寫下今天的心情，還是單純跟我聊聊呢？我都在這裡陪你。
-          </div>
-          <div class="chatbox-default me">紀錄今天的情緒</div>
-          <div class="chatbox-default robot">好啊！</div>
-          <div class="chatbox-default robot">
-            先挑選一個最貼近你現在感受的情緒～
-          </div>
-        </div>
-      </section>
+            <section class="px-5 pt-11 pb-113">
+                <div
+                    class="d-flex justify-content-center align-items-center w-100 mb-6"
+                >
+                    <img
+                        src="/Re-mind-AAPD-2025/assets/character_normal-Cu56HJCo.png"
+                        alt="character_normal"
+                        height="343px"
+                    />
+                </div>
+                <!-- Character 聊聊標籤 -->
+                <div class="d-flex justify-content-center">
+                    <div
+                        class="position-relative py-3 px-6 rounded-3 bg-white d-inline-flex shadow-lg"
+                    >
+                        <p class="fs-6 fw-normal text-gray-900 lh-base">
+                            今天想要冥想幾分鐘呢？
+                        </p>
+                        <svg
+                            width="2em"
+                            height="2em"
+                            viewBox="0 0 16 16"
+                            class="position-absolute top-0 start-50 translate-middle mb-1"
+                            fill="var(--bs-white)"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M7.247 4.86L2.451 10.342C1.885 10.987 2.345 12 3.204 12h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </section>
 
-      <!-- 底部區域：系統提供的sticker/input-->
-      <section class="bottom-side position-absolute bottom-0 pb-3">
-        <!-- sticker-SM -->
-        <ul
-          class="emotionSM d-flex justify-content-center flex-nowrap mb-4 gap-3 overflow-x-auto"
-          id="multi-selection-group"
-        >
-          <li
-            class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10"
-            data-text="放鬆"
-          >
-            <img src="/Re-mind-AAPD-2025/assets/Relax-CFqSrkoG.png" alt="Relax" />
-            放鬆
-          </li>
-          <li
-            class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10"
-            data-text="平靜"
-          >
-            <img src="/Re-mind-AAPD-2025/assets/Ordinary-ZGk5R11x.png" alt="Ordinary" />
-            平靜
-          </li>
-          <li
-            class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10"
-            data-text="難過"
-          >
-            <img src="/Re-mind-AAPD-2025/assets/Sad-BQjrYz9g.png" alt="Sad" />
-            難過
-          </li>
-          <li
-            class="sticker stickerSM d-flex flex-column align-items-center gap-3 p-3 border border-yellow-500 rounded-2 bg-yellow-10"
-            data-text="焦慮"
-          >
-            <img src="/Re-mind-AAPD-2025/assets/Anxious-Bk2g5ct9.png" alt="Anxious" />
-            焦慮
-          </li>
-        </ul>
+            <section class="mx-5">
+                <div class="mb-5 d-flex">
+                    <div>
+                        <a
+                            href="#"
+                            class="bg-white py-4 px-6 shadow ms-30 me-3 rounded-3 d-flex justify-content-center align-items-center"
+                        >
+                            <p class="fs-6 fw-normal text-gray-900 lh-base">
+                                1分鐘
+                            </p>
+                        </a>
+                    </div>
+                    <div>
+                        <a
+                            href="meditation-3.html"
+                            class="bg-white py-4 px-6 shadow me-3 rounded-3 d-flex justify-content-center align-items-center"
+                        >
+                            <p class="fs-6 fw-normal text-gray-900 lh-base">
+                                3分鐘
+                            </p>
+                        </a>
+                    </div>
+                    <div>
+                        <a
+                            href="#"
+                            class="bg-white py-4 px-6 shadow me-30 rounded-3 d-flex justify-content-center align-items-center"
+                        >
+                            <p class="fs-6 fw-normal text-gray-900 lh-base">
+                                5分鐘
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <!-- 返回小圓按鈕 -->
+                    <a
+                        href="meditation-1.html"
+                        class="bg-white d-flex justify-content-center align-items-center rounded-circle me-3 shadow"
+                        style="width: 48px; height: 48px"
+                    >
+                        <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.53579%2010.1707L2.76789%2010.9563L2%2010.1707L2.76789%209.38515L3.53579%2010.1707ZM22%2019.0596C22%2019.3543%2021.8856%2019.6369%2021.6819%2019.8453C21.4782%2020.0536%2021.2019%2020.1707%2020.9139%2020.1707C20.6258%2020.1707%2020.3495%2020.0536%2020.1459%2019.8453C19.9422%2019.6369%2019.8277%2019.3543%2019.8277%2019.0596H22ZM8.19855%2016.5118L2.76789%2010.9563L4.30368%209.38515L9.73433%2014.9407L8.19855%2016.5118ZM2.76789%209.38515L8.19855%203.82959L9.73433%205.4007L4.30368%2010.9563L2.76789%209.38515ZM3.53579%209.05959H14.3971V11.2818H3.53579V9.05959ZM22%2016.8374V19.0596H19.8277V16.8374H22ZM14.3971%209.05959C16.4135%209.05959%2018.3473%209.87903%2019.7732%2011.3376C21.199%2012.7963%2022%2014.7746%2022%2016.8374H19.8277C19.8277%2015.3639%2019.2556%2013.9509%2018.2371%2012.909C17.2187%2011.8671%2015.8374%2011.2818%2014.3971%2011.2818V9.05959Z'%20fill='%23F1B626'/%3e%3c/svg%3e" alt="back" />
+                    </a>
 
-        <!-- input-noEnter -->
-        <div class="input-noEnter px-5 d-flex gap-3">
-          <input
-            class="inputbar-noEnter bg-white py-4 px-5 rounded-1 border border-gray-50 w-100"
-            id="inputbar-noEnter"
-            type="text"
-            placeholder="|"
-            readonly
-          />
-          <a
-            class="text-send-btn rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-            href="./choosing-emotionR.html"
-            ><svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4.51082 19.9986C4.16617 20.1414 3.83934 20.1125 3.53034 19.9119C3.22134 19.7113 3.06727 19.4195 3.06812 19.0367V13.8564L10.5121 12.0876L3.06812 10.3188V5.13853C3.06812 4.7548 3.22262 4.46307 3.53162 4.26332C3.84061 4.06357 4.16744 4.03422 4.51209 4.17527L20.4442 11.0994C20.8601 11.2965 21.0681 11.6277 21.0681 12.0929C21.0681 12.5572 20.8601 12.8848 20.4442 13.0758L4.51082 19.9986Z"
-                fill="white"
-              />
-            </svg>
-          </a>
-        </div>
-        <div class="home-bar">
+                    <!-- 紅色膠囊按鈕 -->
+                    <a
+                        href="stress-relief-guidance-1.html"
+                        class="bg-red-500 py-4 flex-grow-1 d-flex justify-content-center align-items-center rounded-pill shadow"
+                    >
+                        <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.9975%208C8.3147%208%204.85327%208.82682%203.12673%2010.6721C2.35273%2011.5082%201.95321%2012.5173%202.00437%2013.7354C2.03812%2014.4715%202.25112%2015.1257%202.65028%2015.5531C2.95691%2015.8804%203.36514%2016.0623%203.84957%2015.9805L7.0051%2015.4077C7.48119%2015.3262%207.81285%2015.1711%208.0255%2014.9349C8.30636%2014.6441%208.39127%2014.2078%208.39127%2013.6354L8.39998%2012.7174C8.39998%2012.572%208.45913%2012.4626%208.53606%2012.3719C8.62097%2012.2629%208.74833%2012.2171%208.84196%2012.19C9.42037%2012.0445%2010.6026%2011.9084%2011.9975%2011.9084C13.4007%2011.9084%2014.5742%2012.017%2015.1527%2012.1993C15.2376%2012.2264%2015.3566%2012.2807%2015.4502%2012.3719C15.5351%2012.4626%2015.5863%2012.5627%2015.5863%2012.7081L15.595%2013.635C15.6033%2014.2078%2015.6882%2014.6441%2015.9604%2014.9349C16.1818%2015.1715%2016.5134%2015.3259%2016.9895%2015.4077L20.1022%2015.9712C20.6041%2016.0623%2021.0294%2015.8711%2021.3614%2015.526C21.7605%2015.1079%2021.9819%2014.4626%2021.9989%2013.7265C22.0243%2012.4991%2021.5907%2011.49%2020.8254%2010.6721C19.0905%208.82682%2015.6799%208%2011.9975%208Z'%20fill='%23fff'/%3e%3c/svg%3e" alt="phone" />
+                    </a>
+                </div>
+            </section>
+
+            <!-- 底部 -->
+            <section class="bottom-side position-absolute bottom-0 pb-3">
+                <div class="home-bar">
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAAAiCAYAAACk9JkOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7dRBEcJAEETRBiVIwAISkIBS1gE4SiaVQyrJPYfd96q+g+lJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4e1beapOqX9Sbo2C2MYBnzM7Bp1St0y3MfwxQ4s/+O3cMIWmDvH7rmuY/hE2Nm06p3AAAAAAAAAAAAAAAALjIDdMeKJRv89mwAAAAASUVORK5CYII=" alt="home-bar">
-</div>      </section>
-    </div>
+</div>            </section>
+        </main>
 
-    <!-- 要有動畫效果的chatbox內容 -->
-    <script>
-      window.messageText = [
-        { role: "me", text: "普普通通" },
-        { role: "robot", text: "接下來我們一起來探索更具體的情緒～" },
-      ];
-    </script>
-
-    <!-- 匯入 Vite 主入口 JS -->
-  </body>
+    </body>
 </html>

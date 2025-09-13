@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>冥想靜心-Step5</title>
+    </head>
+    <body>
+        <!-- meditation-5.html -->
+        <main class="view-section-finish position-relative">
+            <!-- 頂部 -->
+            <section class="top-side pt-3">
+                <%- include('./layout/status-bar'); -%>
+            </section>
+
+            <section class="px-5 pt-11 pb-93 mb-6">
+                <div
+                    class="d-flex justify-content-center align-items-center w-100 mb-6"
+                >
+                    <img
+                        src="/assets/image/Character/character_happy.png"
+                        alt="character_happy"
+                        height="343px"
+                    />
+                </div>
+                <!-- Character 聊聊標籤 -->
+                <div class="d-flex justify-content-center">
+                    <div
+                        class="position-relative py-3 px-6 rounded-3 bg-white d-inline-flex shadow-lg"
+                    >
+                        <p class="fs-6 fw-normal text-gray-900 lh-base">
+                            恭喜你完成冥想了！無論過程中是否分心、是否平靜，只要願意停下來幾分鐘陪伴自己，這就是非常值得被鼓勵的事～
+                        </p>
+                        <svg
+                            width="2em"
+                            height="2em"
+                            viewBox="0 0 16 16"
+                            class="position-absolute top-0 start-50 translate-middle mb-1"
+                            fill="var(--bs-white)"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M7.247 4.86L2.451 10.342C1.885 10.987 2.345 12 3.204 12h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <section class="p-5">
+                <div class="d-flex justify-content-center">
+                    <!-- 返回小圓按鈕 -->
+                    <a
+                        href="meditation-4.html"
+                        class="bg-white d-flex justify-content-center align-items-center rounded-circle me-6 shadow"
+                        style="width: 48px; height: 48px"
+                    >
+                        <img src="/assets/image/icon/back.svg" alt="back" />
+                    </a>
+                    <!-- 再來一次小圓按鈕 -->
+                    <!-- Button trigger modal-again -->
+                    <button
+                        type="button"
+                        class="btn bg-white d-flex justify-content-center align-items-center rounded-circle me-6 shadow"
+                        style="width: 48px; height: 48px"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Modal-again"
+                    >
+                        <img
+                            src="/assets/image/icon/refresh.svg"
+                            alt="refresh"
+                            style="
+                                filter: invert(70%) sepia(73%) saturate(580%)
+                                    hue-rotate(3deg) brightness(95%)
+                                    contrast(90%);
+                            "
+                        />
+                    </button>
+
+                    <!-- Modal-again -->
+                    <div
+                        class="modal fade"
+                        id="Modal-again"
+                        data-bs-backdrop="static"
+                        data-bs-keyboard="false"
+                        tabindex="-1"
+                        aria-hidden="true"
+                    >
+                        <div
+                            class="modal-dialog modal-sm modal-dialog-centered"
+                        >
+                            <div class="modal-content bg-white">
+                                <div class="modal-body">
+                                    <p
+                                        class="fs-5 fw-semibold text-gray-900 text-center mb-5"
+                                    >
+                                        確定要從頭開始冥想嗎？
+                                    </p>
+                                    <div class="modal-actions">
+                                        <button
+                                            type="button"
+                                            class="btn btn-gray-100 rounded-pill fs-6 fw-semibold text-gray-900"
+                                            data-bs-dismiss="modal"
+                                        >
+                                            再想想
+                                        </button>
+                                        <a
+                                            href="meditation-1.html"
+                                            class="btn btn-yellow-500 rounded-pill fs-6 fw-semibold text-gray-900"
+                                        >
+                                            確認
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 紅色小圓按鈕 -->
+                    <!-- Button trigger modal-chatroom -->
+                    <button
+                        type="button"
+                        class="bg-red-500 d-flex justify-content-center align-items-center rounded-pill shadow border-0"
+                        style="width: 48px; height: 48px"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Modal-chatroom"
+                    >
+                        <img
+                            src="/assets/image/icon/phone.svg"
+                            alt="phone"
+                        />
+                    </button>
+
+                    <!-- Modal-chatroom -->
+                    <div
+                        class="modal fade"
+                        id="Modal-chatroom"
+                        data-bs-backdrop="static"
+                        data-bs-keyboard="false"
+                        tabindex="-1"
+                        aria-hidden="true"
+                    >
+                        <div
+                            class="modal-dialog modal-sm modal-dialog-centered"
+                        >
+                            <div class="modal-content bg-white">
+                                <div class="modal-body">
+                                    <p
+                                        class="fs-5 fw-semibold text-gray-900 text-center mb-5"
+                                    >
+                                        回到聊天室聊聊
+                                    </p>
+                                    <div class="modal-actions">
+                                        <button
+                                            type="button"
+                                            class="btn btn-gray-100 rounded-pill fs-6 fw-semibold text-gray-900"
+                                            data-bs-dismiss="modal"
+                                        >
+                                            再想想
+                                        </button>
+                                        <a
+                                            href="choosing-result.html"
+                                            class="btn btn-yellow-500 rounded-pill fs-6 fw-semibold text-gray-900"
+                                        >
+                                            確認
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 底部 -->
+            <section class="bottom-side position-absolute bottom-0 pb-3">
+                <%- include('./layout/home-bar'); -%>
+            </section>
+        </main>
+
+        <script type="module" src="../main.js"></script>
+    </body>
+</html>

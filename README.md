@@ -219,6 +219,8 @@ $h5-font-size: $font-size-base * 1.125 !default;
 $h6-font-size: $font-size-base !default;
 
 fs-7 = 14px
+fs-8 = 12px
+fs-9 = 10px
 
 ```
 

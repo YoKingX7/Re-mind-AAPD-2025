@@ -1,0 +1,18 @@
+.border-dashed {
+    border: 1px dashed $yellow-300;
+}
+
+.emotion-donut-chart {
+    background-image: url(/assets/image/chart/Donut-chart.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+}
+
+.label-dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 100px;
+    display: inline-flex;
+}

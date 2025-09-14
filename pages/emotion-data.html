@@ -24,7 +24,7 @@
             </div>
             
             <!-- 中間：滾動-->
-            <div class="scroll-content overflow-y-scroll">
+            <div class="scroll-content-full overflow-y-scroll">
 
             <!-- 時間Tabs -->
             <section class="mx-3 mb-3">
@@ -106,8 +106,7 @@
                     </p>
                     </div>
                     </div>
-                
-                
+                               
                 <div class="d-flex w-100 mb-5">
                 <div class="emotion-donut-chart d-flex justify-content-center align-items-center flex-column me-4">
                     <p class="fs-8"><span class="fs-3 fw-bold lh-sm">40</span>次</p>
@@ -140,48 +139,9 @@
 
                 </div>
 
-                <div class="d-flex flex-wrap row-gap-2 column-gap-6 pe-4">
-                    <div class="d-flex align-items-center">
-                    <span class="label-dot bg-sad me-2"></span>
-                    <span class="fs-7">難過</span></div>
-
-                    <div class="d-flex align-items-center">
-                    <span class="label-dot bg-anxious me-2"></span>
-                    <span class="fs-7">焦慮</span></div>
-
-                    <div class="d-flex align-items-center">
-                    <span class="label-dot bg-neutral me-2"></span>
-                    <span class="fs-7">普通</span></div>                    
-                
-                    <div class="d-flex align-items-center">
-                    <span class="label-dot bg-fulfilled me-2"></span>
-                    <span class="fs-7">充實</span></div>
-
-                    <div class="d-flex align-items-center">
-                    <span class="label-dot bg-relaxed me-2"></span>
-                    <span class="fs-7">放鬆</span></div>
-
-                    <div class="d-flex align-items-center">
-                    <span class="label-dot bg-joyful me-2"></span>
-                    <span class="fs-7">愉悅</span></div>                  
-                
-                    <div class="d-flex align-items-center">
-                    <span class="label-dot bg-angry me-2"></span>
-                    <span class="fs-7">憤怒</span></div>             
-                
-                
-                </div>
-                
-               
-
-
-
-
-            <!-- <div>
-            <canvas id="myChart" width="300" height="300"></canvas>
-            </div> -->
-             </div>
-            </section>    
+              <%- include('./components/emotion-label'); -%>  
+            
+            </section>
 
             <!-- 情緒分布 -->
             <section class="mx-5 mb-5">
@@ -209,40 +169,12 @@
                     </p>
                     </div>
                     </div>
-                
-                
-                <div class="d-flex w-100 mb-5">
-                <div class="emotion-donut-chart d-flex justify-content-center align-items-center flex-column me-4">
-                    <p class="fs-8"><span class="fs-3 fw-bold lh-sm">40</span>次</p>
-                    <p class="text-gray-300 fs-8">心情記錄</p>
-                </div>
+            
+            <div>
+                <img src="/assets/image/chart/stacked-bar-chart.svg" alt="stacked-bar-chart" class="mb-5">
+            </div>
 
-                <div class="flex-fill">
-                    <p class="fs-7 mb-2">經常出現的情緒Top3：</p>
-                    <div class="d-flex flex-column bg-yellow-50 py-3 px-4 me-5 rounded-1 gap-2">
-                        <div class="d-flex align-items-center">
-                        <span class="label-dot bg-sad me-2"></span>
-                        <span class="fs-7">難過</span>
-                        <span class="fs-8 ms-auto">8次 • 20%</span>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                        <span class="label-dot bg-anxious me-2"></span>
-                        <span class="fs-7">焦慮</span>
-                        <span class="fs-8 ms-auto">10次	• 25%</span>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                        <span class="label-dot bg-neutral me-2"></span>
-                        <span class="fs-7">普通</span>
-                        <span class="fs-8 ms-auto">6次 • 15%</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                </div>
-
+             <%- include('./components/emotion-label'); -%>  
 
                 
                
@@ -250,14 +182,53 @@
 
 
 
-            <!-- <div>
-            <canvas id="myChart" width="300" height="300"></canvas>
-            </div> -->
+
              </div>
             </section>     
 
-            </div>
+           <!-- 情緒趨勢 -->
+            <section class="mx-5 mb-8">
+                <div
+                    class="border-dashed rounded-3 bg-white ps-5 py-5 shadow mb-5"
+                >
+
+                <div class="d-flex align-items-center mb-5">
+                    <div class="flex-fill"><h5>情緒趨勢</h5></div>
+                    <div class="icon p-1 me-4">
+                    <a href="index.html"><img src="/assets/image/icon/chevron_right.svg" alt="icon-Chevron_right"></a>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-5">
+                    <img
+                            src="/assets/image/Character/character_head.png"
+                            alt="character_pinch"
+                            width="36px"
+                            class="me-3"
+                        />
+                    <div class="bg-yellow-10 border-dashed rounded-1 ps-4 py-3 flex-fill me-5">
+                    <p class="text-gray-300 fs-8 lh-base">
+                                這週情緒波動比較大，看起來這段時間不太容易……謝謝你還願意寫下來。
+                    </p>
+                    </div>
+                    </div>
             
+            <div>
+                <img src="/assets/image/chart/graph-data.svg" alt="graph-data">
+            </div>
+
+             
+
+                
+               
+
+
+
+
+
+             </div>
+            </section>               
+
             <!-- 底部 -->
             <section class="position-absolute bottom-0 pb-8 ps-5">
 
@@ -268,36 +239,6 @@
         </main>
 
         <script type="module" src="../main.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-        new Chart(ctx, {
-        type: 'doughnut', // 圖表類型：甜甜圈
-        data: {
-            labels: ['難過', '焦慮', '普通', '放鬆', '愉悅', '憤怒', '充實'],
-            datasets: [{
-            data: [10, 8, 6, 5, 4, 3, 4],  // 每個情緒的次數
-            backgroundColor: [
-                '#25C4D1', // 難過
-                '#2B73AA', // 焦慮
-                '#A2E553', // 普通
-                '#FFBA1F', // 放鬆
-                '#FF7712', // 愉悅
-                '#ED4235', // 憤怒
-                '#FFA192'  // 充實
-            ],
-            borderWidth: 0
-            }]
-        },
-        options: {
-            responsive: true,
-            cutout: '80%', // 控制中間空洞大小 (50% = 小洞, 90% = 大洞)
-            plugins: {
-            legend: { display: false } // 隱藏 Chart.js 預設圖例
-            }
-        }
-        });
-        </script> -->
     </body>
 </html>

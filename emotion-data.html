@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>查看情緒數據</title>
-      <script type="module" crossorigin src="/Re-mind-AAPD-2025/assets/main-R1V6aTi2.js"></script>
-      <link rel="stylesheet" crossorigin href="/Re-mind-AAPD-2025/assets/main-D4IawC0r.css">
+      <script type="module" crossorigin src="/Re-mind-AAPD-2025/assets/main-OoF7MXAP.js"></script>
+      <link rel="stylesheet" crossorigin href="/Re-mind-AAPD-2025/assets/main-DbZFAvyK.css">
     </head>
     <body>
         <main class="view-section-white position-relative">
@@ -32,7 +32,7 @@
 
 </div>            </section>
 
-            <section class="d-flex px-5 align-items-center py-3 mb-5">
+            <div class="d-flex px-5 align-items-center py-3">
             <div class="icon p-1 me-4">
              <a href="index.html"><img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.7048%2018.0513C16.0951%2018.4974%2016.0951%2019.2195%2015.7048%2019.6655C15.3145%2020.1115%2014.6826%2020.1115%2014.2922%2019.6655L8.2903%2012.8071C7.89998%2012.361%207.89998%2011.639%208.2903%2011.1929L14.2922%204.33452C14.6826%203.88849%2015.3145%203.88849%2015.7048%204.33452C16.0951%204.78054%2016.0951%205.50263%2015.7048%205.94865L10.4092%2012L15.7048%2018.0513Z'%20fill='%230B0B0A'/%3e%3c/svg%3e" alt="icon-Chevron_Left"></a>
             </div>
@@ -40,7 +40,10 @@
                 <h5 class="text-center">情緒數據</h5>
             </div>
             <div style="width:40px;"></div>
-            </section>
+            </div>
+            
+            <!-- 中間：滾動-->
+            <div class="scroll-content overflow-y-scroll">
 
             <!-- 時間Tabs -->
             <section class="mx-3 mb-3">
@@ -198,8 +201,82 @@
             </div> -->
              </div>
             </section>    
- 
 
+            <!-- 情緒分布 -->
+            <section class="mx-5 mb-5">
+                <div
+                    class="border-dashed rounded-3 bg-white ps-5 py-5 shadow mb-5"
+                >
+
+                <div class="d-flex align-items-center mb-5">
+                    <div class="flex-fill"><h5>情緒分布</h5></div>
+                    <div class="icon p-1 me-4">
+                    <a href="index.html"><img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8.2903%2018.0513C7.89998%2018.4974%207.89998%2019.2195%208.2903%2019.6655C8.68063%2020.1115%209.31255%2020.1115%209.70287%2019.6655L15.7048%2012.8071C16.0951%2012.361%2016.0951%2011.639%2015.7048%2011.1929L9.70287%204.33452C9.31255%203.88849%208.68062%203.88849%208.2903%204.33452C7.89998%204.78054%207.89998%205.50263%208.2903%205.94865L13.586%2012L8.2903%2018.0513Z'%20fill='%230B0B0A'/%3e%3c/svg%3e" alt="icon-Chevron_right"></a>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-5">
+                    <img
+                            src="/Re-mind-AAPD-2025/assets/character_head-CXBLHF9q.png"
+                            alt="character_pinch"
+                            width="36px"
+                            class="me-3"
+                        />
+                    <div class="bg-yellow-10 border-dashed rounded-1 ps-4 py-3 flex-fill me-5">
+                    <p class="text-gray-300 fs-8 lh-base">
+                                週三的心情變化滿多的，還好嗎？
+                    </p>
+                    </div>
+                    </div>
+                
+                
+                <div class="d-flex w-100 mb-5">
+                <div class="emotion-donut-chart d-flex justify-content-center align-items-center flex-column me-4">
+                    <p class="fs-8"><span class="fs-3 fw-bold lh-sm">40</span>次</p>
+                    <p class="text-gray-300 fs-8">心情記錄</p>
+                </div>
+
+                <div class="flex-fill">
+                    <p class="fs-7 mb-2">經常出現的情緒Top3：</p>
+                    <div class="d-flex flex-column bg-yellow-50 py-3 px-4 me-5 rounded-1 gap-2">
+                        <div class="d-flex align-items-center">
+                        <span class="label-dot bg-sad me-2"></span>
+                        <span class="fs-7">難過</span>
+                        <span class="fs-8 ms-auto">8次 • 20%</span>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                        <span class="label-dot bg-anxious me-2"></span>
+                        <span class="fs-7">焦慮</span>
+                        <span class="fs-8 ms-auto">10次	• 25%</span>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                        <span class="label-dot bg-neutral me-2"></span>
+                        <span class="fs-7">普通</span>
+                        <span class="fs-8 ms-auto">6次 • 15%</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                </div>
+
+
+                
+               
+
+
+
+
+            <!-- <div>
+            <canvas id="myChart" width="300" height="300"></canvas>
+            </div> -->
+             </div>
+            </section>     
+
+            </div>
+            
             <!-- 底部 -->
             <section class="position-absolute bottom-0 pb-8 ps-5">
 

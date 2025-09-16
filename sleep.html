@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>睡眠評分頁</title>
+
+    <!-- 以下語法：因為重整會出現html還沒加載css樣式，過1秒才後，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
+    <style>
+      body {
+        visibility: hidden;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", () => {
+        document.body.style.visibility = "visible";
+      });
+    </script>
+    <script type="module" crossorigin src="/Re-mind-AAPD-2025/assets/main-CY8ez5pf.js"></script>
+    <link rel="stylesheet" crossorigin href="/Re-mind-AAPD-2025/assets/main-EbS2npfI.css">
+  </head>
+
+  <body>
+    <div class="view-section position-relative" style="background-image: none">
+      <!-- 頂部區域-->
+      <section class="top-side position-absolute bg-yellow-10 pt-3 z-3">
+        <div class="status-bar z-1">
+    <div class="container">
+        <div class="row h-100 align-items-center">
+            <div class="col-4 p-0 d-flex justify-content-center align-items-center"><time class="time"
+                    datetime="2025-08-28T9:41">9:41</time></div>
+            <div class=" col-4 p-0"><img class="dynamic-island" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%2047.1%2013.6'%20xml:space='preserve'%3e%3cpath%20d='M40.3%2013.6H6.8c-3.7%200-6.8-3-6.8-6.8C0%203.1%203.1%200%206.8%200h33.5c3.8%200%206.8%203.1%206.8%206.8%200%203.8-3.1%206.8-6.8%206.8'/%3e%3clinearGradient%20id='a'%20gradientUnits='userSpaceOnUse'%20x1='38.382'%20y1='9.607'%20x2='38.382'%20y2='3.745'%3e%3cstop%20offset='0'%20style='stop-color:%23666'/%3e%3cstop%20offset='1'%20style='stop-color:%23010104'/%3e%3c/linearGradient%3e%3ccircle%20cx='38.4'%20cy='6.8'%20r='3'%20style='fill:url(%23a)'/%3e%3cimage%20style='overflow:visible'%20width='7'%20height='6'%20xlink:href='1A539E31CE765E2E.png'%20transform='translate(34.946%203.95)'/%3e%3clinearGradient%20id='b'%20gradientUnits='userSpaceOnUse'%20x1='35.771'%20y1='-764.506'%20x2='35.771'%20y2='-767.855'%20gradientTransform='rotate(180%2037.077%20-379.643)'%3e%3cstop%20offset='0'%20style='stop-color:%230b131c'/%3e%3cstop%20offset='1'%20style='stop-color:%23354039'/%3e%3c/linearGradient%3e%3ccircle%20cx='38.4'%20cy='6.8'%20r='1.7'%20style='fill:url(%23b)'/%3e%3clinearGradient%20id='c'%20gradientUnits='userSpaceOnUse'%20x1='39.433'%20y1='7.868'%20x2='37.328'%20y2='5.763'%3e%3cstop%20offset='0'%20style='stop-color:%23231f20'/%3e%3cstop%20offset='.083'%20style='stop-color:%23222326'/%3e%3cstop%20offset='.196'%20style='stop-color:%231f2c37'/%3e%3cstop%20offset='.325'%20style='stop-color:%231a3d54'/%3e%3cstop%20offset='.468'%20style='stop-color:%2313537c'/%3e%3cstop%20offset='.62'%20style='stop-color:%230b71ae'/%3e%3cstop%20offset='.779'%20style='stop-color:%230094ec'/%3e%3cstop%20offset='.785'%20style='stop-color:%230095ee'/%3e%3cstop%20offset='.8'%20style='stop-color:%230488d6'/%3e%3cstop%20offset='.838'%20style='stop-color:%230d689f'/%3e%3cstop%20offset='.876'%20style='stop-color:%23154e72'/%3e%3cstop%20offset='.912'%20style='stop-color:%231b394e'/%3e%3cstop%20offset='.946'%20style='stop-color:%231f2b35'/%3e%3cstop%20offset='.976'%20style='stop-color:%23222225'/%3e%3cstop%20offset='1'%20style='stop-color:%23231f20'/%3e%3c/linearGradient%3e%3cpath%20d='M39.9%206.8c0%20.8-.7%201.5-1.5%201.5s-1.5-.7-1.5-1.5.7-1.5%201.5-1.5%201.5.7%201.5%201.5'%20style='fill:url(%23c)'/%3e%3cradialGradient%20id='d'%20cx='38.381'%20cy='6.816'%20r='1.488'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20offset='0'%20style='stop-color:%23231f20'/%3e%3cstop%20offset='.202'%20style='stop-color:%23175168'/%3e%3cstop%20offset='.384'%20style='stop-color:%230d78a2'/%3e%3cstop%20offset='.538'%20style='stop-color:%230695cb'/%3e%3cstop%20offset='.66'%20style='stop-color:%2302a7e5'/%3e%3cstop%20offset='.733'%20style='stop-color:%2300adee'/%3e%3cstop%20offset='.759'%20style='stop-color:%2302a6e4'/%3e%3cstop%20offset='.805'%20style='stop-color:%230693c8'/%3e%3cstop%20offset='.865'%20style='stop-color:%230e749c'/%3e%3cstop%20offset='.935'%20style='stop-color:%23184a5f'/%3e%3cstop%20offset='1'%20style='stop-color:%23231f20'/%3e%3c/radialGradient%3e%3cpath%20d='M39.9%206.8c0%20.8-.7%201.5-1.5%201.5s-1.5-.7-1.5-1.5.7-1.5%201.5-1.5%201.5.7%201.5%201.5'%20style='fill:url(%23d)'/%3e%3cradialGradient%20id='e'%20cx='39.198'%20cy='7.592'%20r='.531'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20offset='0'%20style='stop-color:%23ccc'/%3e%3cstop%20offset='.024'%20style='stop-color:%23c4c4c4'/%3e%3cstop%20offset='.22'%20style='stop-color:%23898989'/%3e%3cstop%20offset='.408'%20style='stop-color:%23585858'/%3e%3cstop%20offset='.586'%20style='stop-color:%23323232'/%3e%3cstop%20offset='.748'%20style='stop-color:%23161616'/%3e%3cstop%20offset='.891'%20style='stop-color:%23060606'/%3e%3cstop%20offset='1'%20style='stop-color:%23000'/%3e%3c/radialGradient%3e%3cpath%20d='M39.7%207.6c0-.3-.2-.5-.5-.5s-.5.2-.5.5.2.5.5.5.5-.2.5-.5'%20style='fill:url(%23e)'/%3e%3c/svg%3e"
+                    alt="dynamic-island"></div>
+            <div class="col-4 p-0 d-flex justify-content-center align-items-center">
+                <div class="function-list">
+                    <img class="signal" src="data:image/svg+xml,%3csvg%20width='21'%20height='13'%20viewBox='0%200%2021%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20.1351%201.68199C20.1351%201.04895%2019.6575%200.535767%2019.0684%200.535767H18.0017C17.4126%200.535767%2016.9351%201.04895%2016.9351%201.68199V11.616C16.9351%2012.249%2017.4126%2012.7622%2018.0017%2012.7622H19.0684C19.6575%2012.7622%2020.1351%2012.249%2020.1351%2011.616V1.68199ZM12.7009%202.98105H13.7676C14.3567%202.98105%2014.8343%203.50655%2014.8343%204.15478V11.5884C14.8343%2012.2367%2014.3567%2012.7622%2013.7676%2012.7622H12.7009C12.1118%2012.7622%2011.6343%2012.2367%2011.6343%2011.5884V4.15478C11.6343%203.50655%2012.1118%202.98105%2012.7009%202.98105ZM8.36917%205.6301H7.30251C6.7134%205.6301%206.23584%206.16229%206.23584%206.81878V11.5735C6.23584%2012.23%206.7134%2012.7622%207.30251%2012.7622H8.36917C8.95828%2012.7622%209.43584%2012.23%209.43584%2011.5735V6.81878C9.43584%206.16229%208.95828%205.6301%208.36917%205.6301ZM3.06839%208.07539H2.00173C1.41262%208.07539%200.935059%208.59998%200.935059%209.24709V11.5905C0.935059%2012.2376%201.41262%2012.7622%202.00173%2012.7622H3.06839C3.6575%2012.7622%204.13506%2012.2376%204.13506%2011.5905V9.24709C4.13506%208.59998%203.6575%208.07539%203.06839%208.07539Z'%20fill='black'/%3e%3c/svg%3e" alt="signal">
+                    <img class="wifi" src="data:image/svg+xml,%3csvg%20width='18'%20height='13'%20viewBox='0%200%2018%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M9.20558%203.10398C11.6927%203.10408%2014.0847%204.02616%2015.8872%205.67964C16.0229%205.8073%2016.2399%205.80569%2016.3736%205.67603L17.6711%204.41257C17.7388%204.34681%2017.7765%204.25773%2017.7759%204.16505C17.7754%204.07237%2017.7366%203.98372%2017.6681%203.91873C12.9371%20-0.455983%205.47335%20-0.455983%200.742333%203.91873C0.673801%203.98368%200.634917%204.07229%200.634285%204.16497C0.633653%204.25766%200.671326%204.34676%200.738966%204.41257L2.03683%205.67603C2.17043%205.80588%202.38755%205.8075%202.5232%205.67964C4.32594%204.02606%206.71823%203.10397%209.20558%203.10398ZM9.20222%207.32425C10.5595%207.32417%2011.8684%207.83591%2012.8745%208.76004C13.0106%208.89119%2013.225%208.88835%2013.3576%208.75363L14.6449%207.43432C14.7127%207.36512%2014.7503%207.27124%2014.7494%207.17369C14.7484%207.07614%2014.7089%206.98306%2014.6397%206.91527C11.5759%204.02442%206.83116%204.02442%203.76732%206.91527C3.69812%206.98306%203.65863%207.07619%203.65772%207.17377C3.65682%207.27135%203.69456%207.36522%203.76249%207.43432L5.0494%208.75363C5.18206%208.88835%205.39642%208.89119%205.53251%208.76004C6.53796%207.83652%207.8458%207.32482%209.20222%207.32425ZM11.7266%2010.1178C11.7286%2010.2232%2011.6915%2010.3247%2011.6242%2010.3985L9.44755%2012.8533C9.38374%2012.9254%209.29675%2012.966%209.20598%2012.966C9.11521%2012.966%209.02822%2012.9254%208.96441%2012.8533L6.78738%2010.3985C6.72013%2010.3247%206.68313%2010.2231%206.68513%2010.1177C6.68712%2010.0124%206.72793%209.9126%206.79792%209.84199C8.18802%208.52809%2010.2239%208.52809%2011.614%209.84199C11.684%209.91266%2011.7247%2010.0125%2011.7266%2010.1178Z'%20fill='black'/%3e%3c/svg%3e" alt="Wifi">
+                    <img class="battery" src="data:image/svg+xml,%3csvg%20width='29'%20height='13'%20viewBox='0%200%2029%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20opacity='0.35'%20x='1.43506'%20y='0.5'%20width='24'%20height='12'%20rx='3.8'%20stroke='black'/%3e%3cpath%20opacity='0.4'%20d='M26.9351%204.78113V8.8566C27.7398%208.51143%2028.2631%207.70847%2028.2631%206.81886C28.2631%205.92926%2027.7398%205.1263%2026.9351%204.78113Z'%20fill='black'/%3e%3crect%20x='2.93506'%20y='2'%20width='21'%20height='9'%20rx='2.5'%20fill='black'/%3e%3c/svg%3e" alt="Battery">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+        <div class="d-flex px-5 align-items-center py-3">
+          <div class="icon p-1 me-4">
+            <a href="index.html"
+              ><img
+                src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.7048%2018.0513C16.0951%2018.4974%2016.0951%2019.2195%2015.7048%2019.6655C15.3145%2020.1115%2014.6826%2020.1115%2014.2922%2019.6655L8.2903%2012.8071C7.89998%2012.361%207.89998%2011.639%208.2903%2011.1929L14.2922%204.33452C14.6826%203.88849%2015.3145%203.88849%2015.7048%204.33452C16.0951%204.78054%2016.0951%205.50263%2015.7048%205.94865L10.4092%2012L15.7048%2018.0513Z'%20fill='%230B0B0A'/%3e%3c/svg%3e"
+                alt="icon-Chevron_Left"
+            /></a>
+          </div>
+          <div class="flex-fill">
+            <h5 class="text-center">睡眠數據</h5>
+          </div>
+          <div style="width: 40px"></div>
+        </div>
+      </section>
+
+      <!-- 中間區域：滾動-->
+      <section
+        class="scroll-content-all overflow-y-scroll bg-yellow-10"
+        style="padding-bottom: 24px"
+      >
+        <!-- 時間Tabs -->
+        <section class="mx-3 mb-3 mt-5">
+          <ul class="nav nav-pills bg-yellow-100 rounded-pill nav-fill">
+            <li class="nav-item px-2">
+              <a
+                class="nav-link active fs-8 text-yellow-900 fw-semibold px-0 py-2 shadow"
+                aria-current="page"
+                href="#"
+                >日</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a
+                class="nav-link fs-8 text-yellow-900 px-0 py-2"
+                aria-current="page"
+                href="#"
+                >週</a
+              >
+            </li>
+
+            <li class="nav-item px-2">
+              <a class="nav-link fs-8 text-yellow-900 px-0 py-2" href="#">月</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link fs-8 text-yellow-900 px-0 py-2" href="#">年</a>
+            </li>
+          </ul>
+        </section>
+        <!-- 時間區間 -->
+        <section
+          class="mb-6 d-flex px-5 py-1 align-items-center bg-yellow-100 rounded-pill mx-5"
+        >
+          <div class="icon p-2 me-3">
+            <a href="#">
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.7048 18.0513C16.0951 18.4974 16.0951 19.2195 15.7048 19.6655C15.3145 20.1115 14.6826 20.1115 14.2922 19.6655L8.2903 12.8071C7.89998 12.361 7.89998 11.639 8.2903 11.1929L14.2922 4.33452C14.6826 3.88849 15.3145 3.88849 15.7048 4.33452C16.0951 4.78054 16.0951 5.50263 15.7048 5.94865L10.4092 12L15.7048 18.0513Z"
+                    fill="#654C10"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div
+            class="d-flex align-items-center flex-fill justify-content-center"
+          >
+            <div class="d-flex align-items-center me-2">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.2743 6.54497C19.2743 6.04243 18.8668 5.63491 18.3642 5.63491H5.63581C5.13326 5.63491 4.72575 6.04243 4.72575 6.54497V19.2734C4.72575 19.7759 5.13326 20.1834 5.63581 20.1834H18.3642C18.8668 20.1834 19.2743 19.7759 19.2743 19.2734V6.54497ZM21.0908 19.2734C21.0908 20.7793 19.8702 22 18.3642 22H5.63581C4.12986 22 2.90918 20.7793 2.90918 19.2734V6.54497C2.90918 5.03903 4.12986 3.81834 5.63581 3.81834H18.3642C19.8702 3.81834 21.0908 5.03903 21.0908 6.54497V19.2734Z"
+                  fill="#654C10"
+                />
+                <path
+                  d="M14.7284 6.54497V2.90828C14.7284 2.40658 15.135 2 15.6367 2C16.1384 2 16.545 2.40658 16.545 2.90828V6.54497C16.545 7.04667 16.1384 7.45325 15.6367 7.45325C15.135 7.45325 14.7284 7.04667 14.7284 6.54497Z"
+                  fill="#654C10"
+                />
+                <path
+                  d="M7.45504 6.54497V2.90828C7.45504 2.40658 7.86162 2 8.36332 2C8.86502 2 9.27161 2.40658 9.27161 2.90828V6.54497C9.27161 7.04667 8.86502 7.45325 8.36332 7.45325C7.86162 7.45325 7.45504 7.04667 7.45504 6.54497Z"
+                  fill="#654C10"
+                />
+                <path
+                  d="M20.1826 9.27337C20.6843 9.27337 21.0908 9.67996 21.0908 10.1817C21.0908 10.6834 20.6843 11.0899 20.1826 11.0899H3.81746C3.31576 11.0899 2.90918 10.6834 2.90918 10.1817C2.90918 9.67996 3.31576 9.27337 3.81746 9.27337H20.1826Z"
+                  fill="#654C10"
+                />
+              </svg>
+            </div>
+            <p class="fw-semibold text-yellow-900 fs-8">2025/7/20 (日)</p>
+          </div>
+          <div class="icon p-2 ms-3">
+            <a href="#">
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.2903 18.0513C7.89998 18.4974 7.89998 19.2195 8.2903 19.6655C8.68063 20.1115 9.31255 20.1115 9.70287 19.6655L15.7048 12.8071C16.0951 12.361 16.0951 11.639 15.7048 11.1929L9.70287 4.33452C9.31255 3.88849 8.68062 3.88849 8.2903 4.33452C7.89998 4.78054 7.89998 5.50263 8.2903 5.94865L13.586 12L8.2903 18.0513Z"
+                    fill="#654C10"
+                  />
+                </svg></div
+            ></a>
+          </div>
+        </section>
+        <main class="container mb-5">
+          <!-- 睡眠品質評分 -->
+          <section
+            class="container py-5 mb-5 border-dashed rounded-3 bg-white shadow"
+          >
+            <!-- 1.title -->
+            <div class="mb-5">
+              <div class="flex-fill"><h5>睡眠品質評分</h5></div>
+            </div>
+
+            <!-- 2.毛毛說話 -->
+            <div class="d-flex align-items-center mb-5">
+              <img
+                src="/Re-mind-AAPD-2025/assets/character_head-CXBLHF9q.png"
+                alt="character_pinch"
+                width="36px"
+                class="me-3"
+              />
+              <div
+                class="bg-yellow-10 border-dashed rounded-1 px-4 py-3 flex-fill"
+              >
+                <p class="text-gray-300 fs-8 lh-base">
+                  雖然中間有些翻身與清醒，但你成功完成了完整的睡眠週期，睡眠品質表現不錯！今天可以放心迎接挑戰
+                  💪
+                </p>
+              </div>
+            </div>
+
+            <!-- 3.圖表內容 -->
+            <div class="d-flex gap-3 w-100">
+              <div class="position-relative">
+                <div>
+                  <svg class="circular-chart" viewBox="0 0 100 100">
+                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                    <circle
+                      class="progress-line progress-line-blue"
+                      cx="50"
+                      cy="50"
+                      r="45"
+                    ></circle>
+                  </svg>
+                </div>
+                <div
+                  class="position-absolute top-50 start-50 translate-middle text-center"
+                >
+                  <p class="fs-8 fw-bold">
+                    <span class="fs-3 lh-sm">85</span>%
+                  </p>
+                  <p class="text-gray-300 fs-8">品質不錯</p>
+                </div>
+              </div>
+
+              <div class="d-flex flex-column flex-fill gap-2">
+                <div
+                  class="bg-yellow-50 px-4 rounded-1 h-100 d-flex flex-column justify-content-center"
+                >
+                  <p class="fs-8">睡眠時長</p>
+                  <p class="fs-5 fw-semibold">7小時 36分鐘</p>
+                </div>
+                <div
+                  class="bg-yellow-50 px-4 rounded-1 h-100 d-flex flex-column justify-content-center"
+                >
+                  <p class="fs-8">睡眠效率</p>
+                  <p class="fs-5 fw-semibold">89%</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 睡眠結構圖 -->
+          <section class="py-5 mb-5 border-dashed rounded-3 bg-white shadow">
+            <!-- 1.title -->
+            <div class="px-5 mb-5">
+              <div class="flex-fill"><h5>睡眠結構圖</h5></div>
+            </div>
+            <!-- 3.圖表內容 -->
+            <div style="padding-left: 8.5px; padding-right: 8.5px">
+              <ul
+                class="nav nav-pills bg-yellow-100 rounded-pill nav-fill mb-3"
+              >
+                <li class="nav-item px-2">
+                  <a
+                    class="nav-link active fs-8 text-yellow-900 px-0 py-2"
+                    aria-current="page"
+                    href="#overview"
+                    data-bs-toggle="pill"
+                    >總覽</a
+                  >
+                </li>
+                <li class="nav-item px-2">
+                  <a
+                    class="nav-link fs-8 text-yellow-900 px-0 py-2"
+                    aria-current="page"
+                    href="#timeline"
+                    data-bs-toggle="pill"
+                    >時間軸</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <!-- 總覽內容 -->
+                <div
+                  class="tab-pane fade show active"
+                  id="overview"
+                  role="tabpanel"
+                  aria-labelledby="overview-tab"
+                  tabindex="0"
+                >
+                  <img
+                    src="/Re-mind-AAPD-2025/assets/sleep-overview-chart-BqOY44c0.svg"
+                    alt="sleep-overview-chart"
+                  />
+                </div>
+                <!-- 時間軸內容 -->
+                <div
+                  class="tab-pane fade"
+                  id="timeline"
+                  role="tabpanel"
+                  aria-labelledby="timeline-tab"
+                  tabindex="0"
+                >
+                  <img
+                    src="/Re-mind-AAPD-2025/assets/sleep-timeline-charts-1O5aZBIi.svg"
+                    alt="sleep-timeline-charts"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 睡眠品質比較 -->
+          <section
+            class="container py-5 mb-5 border-dashed rounded-3 bg-white shadow"
+          >
+            <!-- 1.title -->
+            <div class="mb-5">
+              <div class="flex-fill"><h5>睡眠品質比較</h5></div>
+            </div>
+
+            <!-- 2.毛毛說話 -->
+            <div class="d-flex align-items-center mb-5">
+              <img
+                src="/Re-mind-AAPD-2025/assets/character_head-CXBLHF9q.png"
+                alt="character_pinch"
+                width="36px"
+                class="me-3"
+              />
+              <div
+                class="bg-yellow-10 border-dashed rounded-1 px-4 py-3 flex-fill"
+              >
+                <p class="text-gray-300 fs-8 lh-base">
+                  相較前一天提升了 57%！ 太棒了！
+                </p>
+              </div>
+            </div>
+
+            <!-- 3.圖表內容 -->
+            <div class="d-flex gap-5 w-100 justify-content-center">
+              <!-- 第一個圓 -->
+              <div>
+                <div class="position-relative mb-3">
+                  <div>
+                    <svg class="circular-chart" viewBox="0 0 100 100">
+                      <circle
+                        class="progress-bg"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                      ></circle>
+                      <circle
+                        class="progress-line progress-line-blue"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <div
+                    class="position-absolute top-50 start-50 translate-middle text-center"
+                  >
+                    <p class="fs-8 fw-bold">
+                      <span class="fs-3 lh-sm">85</span>%
+                    </p>
+                    <p class="text-gray-300 fs-8">品質不錯</p>
+                  </div>
+                </div>
+                <p class="fs-7 text-center">今天</p>
+              </div>
+              <!-- 第二個圓 -->
+              <div>
+                <div class="position-relative mb-3">
+                  <div>
+                    <svg class="circular-chart" viewBox="0 0 100 100">
+                      <circle
+                        class="progress-bg"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                      ></circle>
+                      <circle
+                        class="progress-line progress-line-red"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <div
+                    class="position-absolute top-50 start-50 translate-middle text-center"
+                  >
+                    <p class="fs-8 fw-bold">
+                      <span class="fs-3 lh-sm">28</span>%
+                    </p>
+                    <p class="text-gray-300 fs-8">品質偏低</p>
+                  </div>
+                </div>
+                <p class="fs-7 text-center">7月19日</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 夜間生命體徵 -->
+          <section
+            class="container py-5 mb-5 border-dashed rounded-3 bg-white shadow"
+          >
+            <!-- 1.title -->
+            <div class="mb-5 d-flex justify-content-between align-items-center">
+              <div class="flex-fill"><h5>夜間生命體徵</h5></div>
+              <div class="icon p-1 me-4">
+                <a href="index.html"
+                  ><img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8.2903%2018.0513C7.89998%2018.4974%207.89998%2019.2195%208.2903%2019.6655C8.68063%2020.1115%209.31255%2020.1115%209.70287%2019.6655L15.7048%2012.8071C16.0951%2012.361%2016.0951%2011.639%2015.7048%2011.1929L9.70287%204.33452C9.31255%203.88849%208.68062%203.88849%208.2903%204.33452C7.89998%204.78054%207.89998%205.50263%208.2903%205.94865L13.586%2012L8.2903%2018.0513Z'%20fill='%230B0B0A'/%3e%3c/svg%3e"
+                    alt="icon-Chevron_right"
+                /></a>
+              </div>
+            </div>
+
+            <!-- 2.毛毛說話 -->
+            <div class="d-flex align-items-center mb-5">
+              <img
+                src="/Re-mind-AAPD-2025/assets/character_head-CXBLHF9q.png"
+                alt="character_pinch"
+                width="36px"
+                class="me-3"
+              />
+              <div
+                class="bg-yellow-10 border-dashed rounded-1 px-4 py-3 flex-fill"
+              >
+                <p class="text-gray-300 fs-8 lh-base">
+                  整體來看，你的身體在睡眠中有良好的修復與放鬆反應。若能持續規律作息與良好睡前習慣，將有助於進一步提升睡眠品質與日間活力
+                  💪✨
+                </p>
+              </div>
+            </div>
+
+            <!-- 3.圖表內容 -->
+            <div class="d-flex align-items-center gap-4 mb-5">
+              <div class="info d-flex flex-column gap-2 pe-3">
+                <p class="fs-7 text-gray-300">心率</p>
+                <p class="fs-7 align-baseline">
+                  <span class="fs-3 fw-semibold me-1">65</span>次/分鐘
+                </p>
+              </div>
+              <div class="flex-fill">
+                <img src="/Re-mind-AAPD-2025/assets/bar1-C7ybNFYa.svg" alt="bar1" />
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4 mb-5">
+              <div class="info d-flex flex-column gap-2 pe-3">
+                <p class="fs-7 text-gray-300">呼吸頻率</p>
+                <p class="fs-7 align-baseline">
+                  <span class="fs-3 fw-semibold me-1">18</span>次/分鐘
+                </p>
+              </div>
+              <div class="flex-fill">
+                <img src="/Re-mind-AAPD-2025/assets/bar1-C7ybNFYa.svg" alt="bar1" />
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4 mb-5">
+              <div class="info d-flex flex-column gap-2 pe-3">
+                <p class="fs-7 text-gray-300">心率變異性</p>
+                <p class="fs-7 align-baseline">
+                  <span class="fs-3 fw-semibold me-1">46</span>毫秒
+                </p>
+              </div>
+              <div class="flex-fill">
+                <img src="/Re-mind-AAPD-2025/assets/bar1-C7ybNFYa.svg" alt="bar1" />
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+              <div class="info d-flex flex-column gap-2 pe-3">
+                <p class="fs-7 text-gray-300">血氧飽和度</p>
+                <p class="fs-7 align-baseline">
+                  <span class="fs-3 fw-semibold me-1">97</span>%
+                </p>
+              </div>
+              <div class="flex-fill">
+                <img src="/Re-mind-AAPD-2025/assets/bar1-C7ybNFYa.svg" alt="bar1" />
+              </div>
+            </div>
+          </section>
+        </main>
+      </section>
+
+      <!-- 底部區域-->
+      <section class="bottom-side position-absolute bottom-0 pb-3">
+        <div class="home-bar">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAAAiCAYAAACk9JkOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7dRBEcJAEETRBiVIwAISkIBS1gE4SiaVQyrJPYfd96q+g+lJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4e1beapOqX9Sbo2C2MYBnzM7Bp1St0y3MfwxQ4s/+O3cMIWmDvH7rmuY/hE2Nm06p3AAAAAAAAAAAAAAAALjIDdMeKJRv89mwAAAAASUVORK5CYII=" alt="home-bar">
+</div>      </section>
+    </div>
+  </body>
+</html>

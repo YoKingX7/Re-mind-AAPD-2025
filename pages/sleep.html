@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>睡眠評分頁</title>
+
+    <!-- 以下語法：因為重整會出現html還沒加載css樣式，過1秒才後，所以先設定一開始看不到，等下載完再出現畫面（如果有更好辦法拜託教我～～） -->
+    <style>
+      body {
+        visibility: hidden;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", () => {
+        document.body.style.visibility = "visible";
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="view-section position-relative" style="background-image: none">
+      <!-- 頂部區域-->
+      <section class="top-side position-absolute bg-yellow-10 pt-3 z-3">
+        <%- include('./layout/status-bar'); -%>
+
+        <div class="d-flex px-5 align-items-center py-3">
+          <div class="icon p-1 me-4">
+            <a href="index.html"
+              ><img
+                src="/assets/image/icon/chevron_left.svg"
+                alt="icon-Chevron_Left"
+            /></a>
+          </div>
+          <div class="flex-fill">
+            <h5 class="text-center">睡眠數據</h5>
+          </div>
+          <div style="width: 40px"></div>
+        </div>
+      </section>
+
+      <!-- 中間區域：滾動-->
+      <section
+        class="scroll-content-all overflow-y-scroll bg-yellow-10"
+        style="padding-bottom: 24px"
+      >
+        <!-- 時間Tabs -->
+        <section class="mx-3 mb-3 mt-5">
+          <ul class="nav nav-pills bg-yellow-100 rounded-pill nav-fill">
+            <li class="nav-item px-2">
+              <a
+                class="nav-link active fs-8 text-yellow-900 fw-semibold px-0 py-2 shadow"
+                aria-current="page"
+                href="#"
+                >日</a
+              >
+            </li>
+            <li class="nav-item px-2">
+              <a
+                class="nav-link fs-8 text-yellow-900 px-0 py-2"
+                aria-current="page"
+                href="#"
+                >週</a
+              >
+            </li>
+
+            <li class="nav-item px-2">
+              <a class="nav-link fs-8 text-yellow-900 px-0 py-2" href="#">月</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link fs-8 text-yellow-900 px-0 py-2" href="#">年</a>
+            </li>
+          </ul>
+        </section>
+        <!-- 時間區間 -->
+        <section
+          class="mb-6 d-flex px-5 py-1 align-items-center bg-yellow-100 rounded-pill mx-5"
+        >
+          <div class="icon p-2 me-3">
+            <a href="#">
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.7048 18.0513C16.0951 18.4974 16.0951 19.2195 15.7048 19.6655C15.3145 20.1115 14.6826 20.1115 14.2922 19.6655L8.2903 12.8071C7.89998 12.361 7.89998 11.639 8.2903 11.1929L14.2922 4.33452C14.6826 3.88849 15.3145 3.88849 15.7048 4.33452C16.0951 4.78054 16.0951 5.50263 15.7048 5.94865L10.4092 12L15.7048 18.0513Z"
+                    fill="#654C10"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div
+            class="d-flex align-items-center flex-fill justify-content-center"
+          >
+            <div class="d-flex align-items-center me-2">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.2743 6.54497C19.2743 6.04243 18.8668 5.63491 18.3642 5.63491H5.63581C5.13326 5.63491 4.72575 6.04243 4.72575 6.54497V19.2734C4.72575 19.7759 5.13326 20.1834 5.63581 20.1834H18.3642C18.8668 20.1834 19.2743 19.7759 19.2743 19.2734V6.54497ZM21.0908 19.2734C21.0908 20.7793 19.8702 22 18.3642 22H5.63581C4.12986 22 2.90918 20.7793 2.90918 19.2734V6.54497C2.90918 5.03903 4.12986 3.81834 5.63581 3.81834H18.3642C19.8702 3.81834 21.0908 5.03903 21.0908 6.54497V19.2734Z"
+                  fill="#654C10"
+                />
+                <path
+                  d="M14.7284 6.54497V2.90828C14.7284 2.40658 15.135 2 15.6367 2C16.1384 2 16.545 2.40658 16.545 2.90828V6.54497C16.545 7.04667 16.1384 7.45325 15.6367 7.45325C15.135 7.45325 14.7284 7.04667 14.7284 6.54497Z"
+                  fill="#654C10"
+                />
+                <path
+                  d="M7.45504 6.54497V2.90828C7.45504 2.40658 7.86162 2 8.36332 2C8.86502 2 9.27161 2.40658 9.27161 2.90828V6.54497C9.27161 7.04667 8.86502 7.45325 8.36332 7.45325C7.86162 7.45325 7.45504 7.04667 7.45504 6.54497Z"
+                  fill="#654C10"
+                />
+                <path
+                  d="M20.1826 9.27337C20.6843 9.27337 21.0908 9.67996 21.0908 10.1817C21.0908 10.6834 20.6843 11.0899 20.1826 11.0899H3.81746C3.31576 11.0899 2.90918 10.6834 2.90918 10.1817C2.90918 9.67996 3.31576 9.27337 3.81746 9.27337H20.1826Z"
+                  fill="#654C10"
+                />
+              </svg>
+            </div>
+            <p class="fw-semibold text-yellow-900 fs-8">2025/7/20 (日)</p>
+          </div>
+          <div class="icon p-2 ms-3">
+            <a href="#">
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.2903 18.0513C7.89998 18.4974 7.89998 19.2195 8.2903 19.6655C8.68063 20.1115 9.31255 20.1115 9.70287 19.6655L15.7048 12.8071C16.0951 12.361 16.0951 11.639 15.7048 11.1929L9.70287 4.33452C9.31255 3.88849 8.68062 3.88849 8.2903 4.33452C7.89998 4.78054 7.89998 5.50263 8.2903 5.94865L13.586 12L8.2903 18.0513Z"
+                    fill="#654C10"
+                  />
+                </svg></div
+            ></a>
+          </div>
+        </section>
+        <main class="container mb-5">
+          <!-- 睡眠品質評分 -->
+          <section
+            class="container py-5 mb-5 border-dashed rounded-3 bg-white shadow"
+          >
+            <!-- 1.title -->
+            <div class="mb-5">
+              <div class="flex-fill"><h5>睡眠品質評分</h5></div>
+            </div>
+
+            <!-- 2.毛毛說話 -->
+            <div class="d-flex align-items-center mb-5">
+              <img
+                src="/assets/image/Character/character_head.png"
+                alt="character_pinch"
+                width="36px"
+                class="me-3"
+              />
+              <div
+                class="bg-yellow-10 border-dashed rounded-1 px-4 py-3 flex-fill"
+              >
+                <p class="text-gray-300 fs-8 lh-base">
+                  雖然中間有些翻身與清醒，但你成功完成了完整的睡眠週期，睡眠品質表現不錯！今天可以放心迎接挑戰
+                  💪
+                </p>
+              </div>
+            </div>
+
+            <!-- 3.圖表內容 -->
+            <div class="d-flex gap-3 w-100">
+              <div class="position-relative">
+                <div>
+                  <svg class="circular-chart" viewBox="0 0 100 100">
+                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                    <circle
+                      class="progress-line progress-line-blue"
+                      cx="50"
+                      cy="50"
+                      r="45"
+                    ></circle>
+                  </svg>
+                </div>
+                <div
+                  class="position-absolute top-50 start-50 translate-middle text-center"
+                >
+                  <p class="fs-8 fw-bold">
+                    <span class="fs-3 lh-sm">85</span>%
+                  </p>
+                  <p class="text-gray-300 fs-8">品質不錯</p>
+                </div>
+              </div>
+
+              <div class="d-flex flex-column flex-fill gap-2">
+                <div
+                  class="bg-yellow-50 px-4 rounded-1 h-100 d-flex flex-column justify-content-center"
+                >
+                  <p class="fs-8">睡眠時長</p>
+                  <p class="fs-5 fw-semibold">7小時 36分鐘</p>
+                </div>
+                <div
+                  class="bg-yellow-50 px-4 rounded-1 h-100 d-flex flex-column justify-content-center"
+                >
+                  <p class="fs-8">睡眠效率</p>
+                  <p class="fs-5 fw-semibold">89%</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 睡眠結構圖 -->
+          <section class="py-5 mb-5 border-dashed rounded-3 bg-white shadow">
+            <!-- 1.title -->
+            <div class="px-5 mb-5">
+              <div class="flex-fill"><h5>睡眠結構圖</h5></div>
+            </div>
+            <!-- 3.圖表內容 -->
+            <div style="padding-left: 8.5px; padding-right: 8.5px">
+              <ul
+                class="nav nav-pills bg-yellow-100 rounded-pill nav-fill mb-3"
+              >
+                <li class="nav-item px-2">
+                  <a
+                    class="nav-link active fs-8 text-yellow-900 px-0 py-2"
+                    aria-current="page"
+                    href="#overview"
+                    data-bs-toggle="pill"
+                    >總覽</a
+                  >
+                </li>
+                <li class="nav-item px-2">
+                  <a
+                    class="nav-link fs-8 text-yellow-900 px-0 py-2"
+                    aria-current="page"
+                    href="#timeline"
+                    data-bs-toggle="pill"
+                    >時間軸</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <!-- 總覽內容 -->
+                <div
+                  class="tab-pane fade show active"
+                  id="overview"
+                  role="tabpanel"
+                  aria-labelledby="overview-tab"
+                  tabindex="0"
+                >
+                  <img
+                    src="/assets/image/chart/sleep-overview-chart.svg"
+                    alt="sleep-overview-chart"
+                  />
+                </div>
+                <!-- 時間軸內容 -->
+                <div
+                  class="tab-pane fade"
+                  id="timeline"
+                  role="tabpanel"
+                  aria-labelledby="timeline-tab"
+                  tabindex="0"
+                >
+                  <img
+                    src="/assets/image/chart/sleep-timeline-charts.svg"
+                    alt="sleep-timeline-charts"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 睡眠品質比較 -->
+          <section
+            class="container py-5 mb-5 border-dashed rounded-3 bg-white shadow"
+          >
+            <!-- 1.title -->
+            <div class="mb-5">
+              <div class="flex-fill"><h5>睡眠品質比較</h5></div>
+            </div>
+
+            <!-- 2.毛毛說話 -->
+            <div class="d-flex align-items-center mb-5">
+              <img
+                src="/assets/image/Character/character_head.png"
+                alt="character_pinch"
+                width="36px"
+                class="me-3"
+              />
+              <div
+                class="bg-yellow-10 border-dashed rounded-1 px-4 py-3 flex-fill"
+              >
+                <p class="text-gray-300 fs-8 lh-base">
+                  相較前一天提升了 57%！ 太棒了！
+                </p>
+              </div>
+            </div>
+
+            <!-- 3.圖表內容 -->
+            <div class="d-flex gap-5 w-100 justify-content-center">
+              <!-- 第一個圓 -->
+              <div>
+                <div class="position-relative mb-3">
+                  <div>
+                    <svg class="circular-chart" viewBox="0 0 100 100">
+                      <circle
+                        class="progress-bg"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                      ></circle>
+                      <circle
+                        class="progress-line progress-line-blue"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <div
+                    class="position-absolute top-50 start-50 translate-middle text-center"
+                  >
+                    <p class="fs-8 fw-bold">
+                      <span class="fs-3 lh-sm">85</span>%
+                    </p>
+                    <p class="text-gray-300 fs-8">品質不錯</p>
+                  </div>
+                </div>
+                <p class="fs-7 text-center">今天</p>
+              </div>
+              <!-- 第二個圓 -->
+              <div>
+                <div class="position-relative mb-3">
+                  <div>
+                    <svg class="circular-chart" viewBox="0 0 100 100">
+                      <circle
+                        class="progress-bg"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                      ></circle>
+                      <circle
+                        class="progress-line progress-line-red"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <div
+                    class="position-absolute top-50 start-50 translate-middle text-center"
+                  >
+                    <p class="fs-8 fw-bold">
+                      <span class="fs-3 lh-sm">28</span>%
+                    </p>
+                    <p class="text-gray-300 fs-8">品質偏低</p>
+                  </div>
+                </div>
+                <p class="fs-7 text-center">7月19日</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 夜間生命體徵 -->
+          <section
+            class="container py-5 mb-5 border-dashed rounded-3 bg-white shadow"
+          >
+            <!-- 1.title -->
+            <div class="mb-5 d-flex justify-content-between align-items-center">
+              <div class="flex-fill"><h5>夜間生命體徵</h5></div>
+              <div class="icon p-1 me-4">
+                <a href="index.html"
+                  ><img
+                    src="/assets/image/icon/chevron_right.svg"
+                    alt="icon-Chevron_right"
+                /></a>
+              </div>
+            </div>
+
+            <!-- 2.毛毛說話 -->
+            <div class="d-flex align-items-center mb-5">
+              <img
+                src="/assets/image/Character/character_head.png"
+                alt="character_pinch"
+                width="36px"
+                class="me-3"
+              />
+              <div
+                class="bg-yellow-10 border-dashed rounded-1 px-4 py-3 flex-fill"
+              >
+                <p class="text-gray-300 fs-8 lh-base">
+                  整體來看，你的身體在睡眠中有良好的修復與放鬆反應。若能持續規律作息與良好睡前習慣，將有助於進一步提升睡眠品質與日間活力
+                  💪✨
+                </p>
+              </div>
+            </div>
+
+            <!-- 3.圖表內容 -->
+            <div class="d-flex align-items-center gap-4 mb-5">
+              <div class="info d-flex flex-column gap-2 pe-3">
+                <p class="fs-7 text-gray-300">心率</p>
+                <p class="fs-7 align-baseline">
+                  <span class="fs-3 fw-semibold me-1">65</span>次/分鐘
+                </p>
+              </div>
+              <div class="flex-fill">
+                <img src="/assets/image/chart/bar1.svg" alt="bar1" />
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4 mb-5">
+              <div class="info d-flex flex-column gap-2 pe-3">
+                <p class="fs-7 text-gray-300">呼吸頻率</p>
+                <p class="fs-7 align-baseline">
+                  <span class="fs-3 fw-semibold me-1">18</span>次/分鐘
+                </p>
+              </div>
+              <div class="flex-fill">
+                <img src="/assets/image/chart/bar1.svg" alt="bar1" />
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4 mb-5">
+              <div class="info d-flex flex-column gap-2 pe-3">
+                <p class="fs-7 text-gray-300">心率變異性</p>
+                <p class="fs-7 align-baseline">
+                  <span class="fs-3 fw-semibold me-1">46</span>毫秒
+                </p>
+              </div>
+              <div class="flex-fill">
+                <img src="/assets/image/chart/bar1.svg" alt="bar1" />
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+              <div class="info d-flex flex-column gap-2 pe-3">
+                <p class="fs-7 text-gray-300">血氧飽和度</p>
+                <p class="fs-7 align-baseline">
+                  <span class="fs-3 fw-semibold me-1">97</span>%
+                </p>
+              </div>
+              <div class="flex-fill">
+                <img src="/assets/image/chart/bar1.svg" alt="bar1" />
+              </div>
+            </div>
+          </section>
+        </main>
+      </section>
+
+      <!-- 底部區域-->
+      <section class="bottom-side position-absolute bottom-0 pb-3">
+        <%- include('./layout/home-bar'); -%>
+      </section>
+    </div>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

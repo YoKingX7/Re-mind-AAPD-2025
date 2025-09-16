@@ -1,0 +1,40 @@
+.circular-chart {
+  width: 120px;
+  height: 120px;
+}
+
+.progress-bg {
+  fill: none;
+  stroke: $gray-50;
+  stroke-width: 10;
+}
+
+.progress-line {
+  fill: none;
+  stroke-width: 10;
+
+  /* 設定線條的圓角！ */
+  stroke-linecap: round;
+
+  /* 整個圓弧長度 */
+  /* 這裡的 282.74 是圓周長 (2 * π * r)，r 是 45。
+     2 * 3.14159 * 45(半徑) ≈ 282.74 */
+  stroke-dasharray: 282.74;
+
+  /* 旋轉圓弧，讓它從頂部開始 */
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+.progress-line-blue {
+  stroke: $blue-500;
+  /* 出現的圓弧長度 */
+  /* 282.74 * 85% ≈ 196.35 */
+  stroke-dashoffset: calc(282.74 - 282.74 * (85 / 100));
+}
+
+.progress-line-red {
+  stroke: $red-500;
+  /* 出現的圓弧長度 */
+  /* 282.74 * 28%  */
+  stroke-dashoffset: calc(282.74 - 282.74 * (28 / 100));
+}

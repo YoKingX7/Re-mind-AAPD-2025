@@ -1,23 +1,28 @@
 .border-dashed {
-    border: 1px dashed $yellow-300;
+  border: 1px dashed $yellow-300;
 }
 
 .emotion-donut-chart {
-    background-image: url(/assets/image/chart/Donut-chart.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 120px;
-    height: 120px;
+  background-image: url(/assets/image/chart/Donut-chart.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
 }
 
 .label-dot {
-    height: 12px;
-    width: 12px;
-    border-radius: 100px;
-    display: inline-flex;
+  height: 12px;
+  width: 12px;
+  border-radius: 100px;
+  display: inline-flex;
 }
 
 .overflow-y-auto {
-    overflow-y: auto;
-    /* 允許垂直滾動 */
+  overflow-y: auto;
+  /* 允許垂直滾動 */
+}
+
+.nav-link.active {
+  box-shadow: $box-shadow;
+  font-weight: 600;
 }

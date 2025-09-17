@@ -2,7 +2,8 @@
     width: 128px;
 }
 .scroll-content-full-data {
-    height: calc(100vh - 220px);
+    // height: calc(100vh - 60px);
+    height: 450px;
     padding-left: 4px;
     padding-right: 4px; /* 避免滾動條擋到內容，可依需求調整 */
 }
